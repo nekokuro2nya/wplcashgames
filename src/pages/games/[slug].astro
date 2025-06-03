@@ -1,0 +1,562 @@
+---
+import gamesData from '../../data/games.json';
+
+export async function getStaticPaths() {
+  const games = Object.values(gamesData);
+  return games.map((game) => ({
+    params: { slug: game.slug },
+    props: { game },
+  }));
+}
+
+const { game } = Astro.props;
+const title = `${game.name} - Download & Play | WPL Games`;
+const description = `${game.shortDescription} Download ${game.name} now and start winning real money! ${game.rating}★ rated by ${game.downloads} players.`;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content={`${game.name}, real money games, ${game.category}, online gaming, india, download, ${game.developer}`} />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={`https://wpl-games.pages.dev/games/${game.slug}`} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={game.heroImage} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content={`https://wpl-games.pages.dev/games/${game.slug}`} />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={game.heroImage} />
+
+    <title>{title}</title>
+    
+    <!-- JSON-LD Structured Data for Game -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "VideoGame",
+      "name": "{game.name}",
+      "description": "{game.description}",
+      "genre": "{game.category}",
+      "gamePlatform": ["Android", "Web Browser"],
+      "applicationCategory": "GameApplication",
+      "operatingSystem": "Android",
+      "downloadUrl": "https://www.vegas11.love/?uagt=vegas0904&path=signup",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "INR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "{game.rating}",
+        "reviewCount": "{game.reviews.length}",
+        "bestRating": "5",
+        "worstRating": "1"
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "{game.developer}"
+      },
+      "image": "{game.heroImage}",
+      "screenshot": "{game.screenshots[0]}"
+    }
+    </script>
+    
+    <style>
+      /* CSS Reset for body margin and prevent horizontal overflow */
+      * {
+        box-sizing: border-box;
+      }
+      
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+      }
+      
+      /* Tab styles */
+      .tab-content {
+        display: none;
+      }
+      .tab-content.active {
+        display: block;
+      }
+      .tab-button.active {
+        background: linear-gradient(135deg, #ff6b35, #f7931e);
+        color: white;
+        border-color: #ff6b35;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+      <div class="container mx-auto px-3 xs:px-4 py-2 xs:py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2 xs:space-x-3">
+            <a href="/" class="flex items-center space-x-2 xs:space-x-3 hover:opacity-80 transition-opacity">
+              <img src="/logo.webp" alt="WPL Logo" class="w-8 h-8 xs:w-10 xs:h-10 object-contain" />
+              <span class="text-xl xs:text-2xl font-display font-bold text-gradient">WPL</span>
+            </a>
+          </div>
+          
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="/" class="text-gray-300 hover:text-primary-400 transition-colors">Home</a>
+            <a href="/#games" class="text-gray-300 hover:text-primary-400 transition-colors">Games</a>
+            <a href="/#payment" class="text-gray-300 hover:text-primary-400 transition-colors">Payment</a>
+            <a href="/contact" class="text-gray-300 hover:text-primary-400 transition-colors">Contact</a>
+          </div>
+
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             class="btn-primary text-xs xs:text-sm md:text-base px-3 xs:px-4 py-2 xs:py-3"
+             target="_blank" rel="noopener noreferrer">
+            Play Now
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center pt-16 xs:pt-20 relative overflow-hidden w-full">
+      <!-- Background Image with Overlay -->
+      <div class="absolute inset-0 z-0">
+        <img src={game.heroImage} alt={`${game.name} Background`} class="w-full h-full object-cover" />
+        <div class="absolute inset-0 bg-black/60"></div>
+      </div>
+
+      <div class="container mx-auto px-3 xs:px-4 relative z-20 w-full">
+        <div class="max-w-4xl w-full mx-auto text-center">
+          <!-- Game Icon -->
+          <div class="mb-6 xs:mb-8">
+            <img src={game.icon} alt={`${game.name} Icon`} 
+                 class="w-24 h-24 xs:w-32 xs:h-32 mx-auto rounded-2xl shadow-2xl border-4 border-white/20" />
+          </div>
+          
+          <!-- Game Title -->
+          <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl font-display font-bold mb-4 xs:mb-6 text-shadow-lg">
+            {game.name}
+          </h1>
+          
+          <!-- Game Info -->
+          <div class="flex flex-wrap justify-center items-center gap-4 xs:gap-6 mb-6 xs:mb-8">
+            <div class="flex items-center text-gold-400">
+              <span class="text-lg xs:text-xl mr-1">⭐</span>
+              <span class="font-bold">{game.rating}</span>
+            </div>
+            <div class="text-gray-300">
+              <span class="text-sm xs:text-base">{game.downloads} Downloads</span>
+            </div>
+            <div class="text-gray-300">
+              <span class="text-sm xs:text-base">{game.category}</span>
+            </div>
+            <div class="text-gray-300">
+              <span class="text-sm xs:text-base">{game.size}</span>
+            </div>
+          </div>
+          
+          <!-- Short Description -->
+          <p class="text-base xs:text-lg md:text-xl text-gray-200 mb-6 xs:mb-8 max-w-2xl mx-auto">
+            {game.shortDescription}
+          </p>
+
+          <!-- Download Button -->
+          <div class="flex flex-col xs:flex-row gap-4 justify-center items-center mb-8 xs:mb-12">
+            <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+               class="btn-hero-primary glow-primary text-base xs:text-lg w-full xs:w-auto relative group animate-float"
+               target="_blank" rel="noopener noreferrer">
+              <span class="relative z-10 flex items-center justify-center">
+                <span class="mr-2 text-lg xs:text-xl">🎮</span>
+                Play {game.name} Now
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Details Section with Tabs -->
+    <section class="py-12 xs:py-16 md:py-20 bg-gray-800">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="max-w-4xl mx-auto">
+          <!-- Tab Navigation -->
+          <div class="flex flex-wrap justify-center mb-8 xs:mb-12 border-b border-gray-700">
+            <button class="tab-button active px-4 xs:px-6 py-3 text-sm xs:text-base font-semibold border-b-2 border-transparent hover:text-primary-400 transition-colors" 
+                    data-tab="details">
+              Details
+            </button>
+            <button class="tab-button px-4 xs:px-6 py-3 text-sm xs:text-base font-semibold border-b-2 border-transparent hover:text-primary-400 transition-colors" 
+                    data-tab="reviews">
+              Reviews
+            </button>
+            <button class="tab-button px-4 xs:px-6 py-3 text-sm xs:text-base font-semibold border-b-2 border-transparent hover:text-primary-400 transition-colors" 
+                    data-tab="installation">
+              Installation
+            </button>
+          </div>
+
+          <!-- Tab Contents -->
+          <!-- Details Tab -->
+          <div class="tab-content active" id="details">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 xs:gap-12">
+              <!-- Game Info -->
+              <div>
+                <h3 class="text-xl xs:text-2xl font-bold mb-4 text-gradient">Game Information</h3>
+                <div class="space-y-3">
+                  <div class="flex justify-between py-2 border-b border-gray-700">
+                    <span class="text-gray-400">Developer</span>
+                    <span class="font-semibold">{game.developer}</span>
+                  </div>
+                  <div class="flex justify-between py-2 border-b border-gray-700">
+                    <span class="text-gray-400">Version</span>
+                    <span class="font-semibold">{game.version}</span>
+                  </div>
+                  <div class="flex justify-between py-2 border-b border-gray-700">
+                    <span class="text-gray-400">Size</span>
+                    <span class="font-semibold">{game.size}</span>
+                  </div>
+                  <div class="flex justify-between py-2 border-b border-gray-700">
+                    <span class="text-gray-400">Category</span>
+                    <span class="font-semibold">{game.category}</span>
+                  </div>
+                  <div class="flex justify-between py-2">
+                    <span class="text-gray-400">Downloads</span>
+                    <span class="font-semibold">{game.downloads}</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Description & Features -->
+              <div>
+                <h3 class="text-xl xs:text-2xl font-bold mb-4 text-gradient">About {game.name}</h3>
+                <p class="text-gray-300 mb-6 leading-relaxed">{game.description}</p>
+                
+                <h4 class="text-lg font-bold mb-3 text-secondary-400">Key Features</h4>
+                <ul class="space-y-2">
+                  {game.features.map((feature: string) => (
+                    <li class="flex items-start">
+                      <span class="text-green-400 mr-2 mt-1">✓</span>
+                      <span class="text-gray-300">{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- Reviews Tab -->
+          <div class="tab-content" id="reviews">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 xs:gap-8">
+              <!-- Overall Rating -->
+              <div class="lg:col-span-1">
+                <div class="card bg-gray-900 border border-gray-700 text-center p-6">
+                  <div class="text-4xl xs:text-5xl font-bold text-gold-400 mb-2">{game.rating}</div>
+                  <div class="flex justify-center mb-2">
+                    <div class="flex text-gold-400 text-lg">
+                      {Array.from({length: 5}, (_, i) => (
+                        <span key={i}>{i < Math.floor(game.rating) ? '★' : '☆'}</span>
+                      ))}
+                    </div>
+                  </div>
+                  <p class="text-gray-400">Based on {game.reviews.length} reviews</p>
+                </div>
+              </div>
+
+              <!-- Reviews List -->
+              <div class="lg:col-span-2 space-y-4">
+                {game.reviews.map((review: any, index: number) => (
+                  <div key={index} class="card bg-gray-900 border border-gray-700 p-4 xs:p-6">
+                    <div class="flex items-start justify-between mb-3">
+                      <div>
+                        <h5 class="font-bold text-white">{review.name}</h5>
+                        <div class="flex items-center mt-1">
+                          <div class="flex text-gold-400 text-sm mr-2">
+                            {Array.from({length: 5}, (_, i) => (
+                              <span key={i}>{i < review.rating ? '★' : '☆'}</span>
+                            ))}
+                          </div>
+                          {review.verified && (
+                            <span class="text-xs bg-green-600 text-white px-2 py-1 rounded">Verified</span>
+                          )}
+                        </div>
+                      </div>
+                      <span class="text-xs text-gray-500">{review.date}</span>
+                    </div>
+                    <p class="text-gray-300 italic">"{review.comment}"</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <!-- Installation Tab -->
+          <div class="tab-content" id="installation">
+            <div class="max-w-2xl mx-auto">
+              <h3 class="text-xl xs:text-2xl font-bold mb-6 text-gradient text-center">How to Install {game.name}</h3>
+              
+              <div class="space-y-6">
+                <!-- Step 1 -->
+                <div class="flex items-start space-x-4">
+                  <div class="w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">1</div>
+                  <div>
+                    <h4 class="font-bold mb-2">Visit WPL Platform</h4>
+                    <p class="text-gray-300">Click the "Play Now" button to visit our gaming platform and create your account.</p>
+                  </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start space-x-4">
+                  <div class="w-10 h-10 bg-secondary-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">2</div>
+                  <div>
+                    <h4 class="font-bold mb-2">Register & Verify</h4>
+                    <p class="text-gray-300">Complete your registration with your mobile number and verify your account for security.</p>
+                  </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-start space-x-4">
+                  <div class="w-10 h-10 bg-accent-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">3</div>
+                  <div>
+                    <h4 class="font-bold mb-2">Add Funds</h4>
+                    <p class="text-gray-300">Deposit money using UPI, net banking, or cards to start playing real money games.</p>
+                  </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="flex items-start space-x-4">
+                  <div class="w-10 h-10 bg-gold-500 rounded-full flex items-center justify-center text-white font-bold flex-shrink-0">4</div>
+                  <div>
+                    <h4 class="font-bold mb-2">Start Playing</h4>
+                    <p class="text-gray-300">Find {game.name} in the games section and start playing to win real money!</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="text-center mt-8">
+                <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+                   class="btn-primary text-base px-6 py-3"
+                   target="_blank" rel="noopener noreferrer">
+                  Get Started Now
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screenshots Section -->
+    <section class="py-12 xs:py-16 md:py-20 bg-gray-900">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center mb-12 xs:mb-16">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+            {game.name} Screenshots
+          </h2>
+          <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto">
+            Get a preview of the exciting gameplay and stunning graphics
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 xs:gap-6">
+          {game.screenshots.map((screenshot: string, index: number) => (
+            <div key={index} class="group cursor-pointer overflow-hidden rounded-lg border border-gray-700 hover:border-primary-500 transition-all duration-300">
+              <img src={screenshot} 
+                   alt={`${game.name} Screenshot ${index + 1}`} 
+                   class="w-full h-48 xs:h-64 object-cover group-hover:scale-105 transition-transform duration-300"
+                   loading="lazy" />
+            </div>
+          ))}
+        </div>
+
+        <div class="text-center mt-8 xs:mt-12">
+          <p class="text-sm text-gray-400 mb-4">🎮 Experience the full game by playing now!</p>
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             class="btn-primary text-sm xs:text-base px-6 py-3"
+             target="_blank" rel="noopener noreferrer">
+            Play {game.name} Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12 xs:py-16 md:py-20 bg-gray-800">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center mb-12 xs:mb-16">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+            {game.name} FAQ
+          </h2>
+          <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto">
+            Get answers to common questions about {game.name}
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-4">
+          {game.faqs.map((faq: any, index: number) => (
+            <div key={index} class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+              <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+                <span class="text-base xs:text-lg font-semibold">{faq.question}</span>
+                <span class="faq-icon text-primary-400 text-xl">+</span>
+              </button>
+              <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+                <p class="text-sm xs:text-base text-gray-300">{faq.answer}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-12 xs:py-16 md:py-20 gradient-bg">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-4 xs:mb-6 text-shadow-lg">
+            Ready to Play {game.name}?
+          </h2>
+          <p class="text-base xs:text-lg md:text-xl text-gray-200 mb-6 xs:mb-8">
+            Join thousands of players already winning real money playing {game.name}!
+          </p>
+
+          <div class="flex flex-col xs:flex-row gap-4 justify-center items-center mb-6 xs:mb-8">
+            <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+               class="btn-primary text-base xs:text-lg px-6 xs:px-8 py-3 xs:py-4 w-full xs:w-auto flex items-center justify-center"
+               target="_blank" rel="noopener noreferrer">
+              <div class="text-xl xs:text-2xl mr-2 xs:mr-3">🎮</div>
+              <div class="text-left">
+                <div class="font-bold">Play {game.name}</div>
+                <div class="text-xs">Start Winning Now!</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="text-xs xs:text-sm text-gray-300">
+            <p class="mb-2">🔒 100% Safe & Secure Platform</p>
+            <p>⭐ {game.rating} Star Rating • {game.downloads} Happy Players</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-8 xs:py-12">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 xs:gap-8">
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center space-x-2 xs:space-x-3 mb-3 xs:mb-4">
+              <img src="/logo.webp" alt="WPL Logo" class="w-8 h-8 xs:w-10 xs:h-10 object-contain" />
+              <span class="text-xl xs:text-2xl font-display font-bold text-gradient">WPL</span>
+            </div>
+            <p class="text-sm xs:text-base text-gray-400 mb-3 xs:mb-4 max-w-md">
+              India's most trusted real money gaming platform. Play skill-based games and win real cash prizes safely and securely.
+            </p>
+            <div class="flex space-x-3 xs:space-x-4">
+              <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                <div class="text-lg xs:text-xl">📘</div>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                <div class="text-lg xs:text-xl">🐦</div>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                <div class="text-lg xs:text-xl">📷</div>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                <div class="text-lg xs:text-xl">📺</div>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-base xs:text-lg font-bold mb-3 xs:mb-4">Quick Links</h3>
+            <ul class="space-y-1 xs:space-y-2">
+              <li><a href="/" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Home</a></li>
+              <li><a href="/#games" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Games</a></li>
+              <li><a href="/#payment" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Payment</a></li>
+              <li><a href="/contact" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Contact</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-base xs:text-lg font-bold mb-3 xs:mb-4">Support</h3>
+            <ul class="space-y-1 xs:space-y-2">
+              <li><a href="#" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Help Center</a></li>
+              <li><a href="/contact" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Contact Us</a></li>
+              <li><a href="#" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Privacy Policy</a></li>
+              <li><a href="#" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-6 xs:mt-8 pt-6 xs:pt-8 text-center">
+          <p class="text-xs xs:text-sm text-gray-400">
+            © 2024 WPL. All rights reserved. | 18+ Only | Play Responsibly
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- JavaScript for Tabs and FAQ -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // Tab functionality
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+          button.addEventListener('click', () => {
+            const targetTab = button.getAttribute('data-tab');
+            
+            // Remove active class from all buttons and contents
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            tabContents.forEach(content => content.classList.remove('active'));
+            
+            // Add active class to clicked button and corresponding content
+            button.classList.add('active');
+            document.getElementById(targetTab).classList.add('active');
+          });
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+          button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            if (faqItem) {
+              const answer = faqItem.querySelector('.faq-answer');
+              const icon = button.querySelector('.faq-icon');
+              
+              if (answer && icon) {
+                const isOpen = !answer.classList.contains('hidden');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                  otherAnswer.classList.add('hidden');
+                });
+                document.querySelectorAll('.faq-icon').forEach(otherIcon => {
+                  otherIcon.textContent = '+';
+                });
+                
+                // Toggle current FAQ
+                if (!isOpen) {
+                  answer.classList.remove('hidden');
+                  icon.textContent = '−';
+                } else {
+                  answer.classList.add('hidden');
+                  icon.textContent = '+';
+                }
+              }
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html> 

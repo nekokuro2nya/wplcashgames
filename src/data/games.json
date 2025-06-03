@@ -1,0 +1,209 @@
+{
+  "9-wickets": {
+    "name": "9 Wickets",
+    "slug": "9-wickets",
+    "icon": "/images/games/app01-9Wickets.webp",
+    "heroImage": "/images/games/app01-9Wickets.webp",
+    "category": "Cricket Game",
+    "rating": 4.7,
+    "downloads": "2M+",
+    "size": "45MB",
+    "version": "2.1.5",
+    "developer": "WPL Games",
+    "shortDescription": "Experience the thrill of cricket with real money rewards in this action-packed game.",
+    "description": "9 Wickets is an exciting cricket-based real money game that combines skill, strategy, and the love of cricket. Play against real opponents, showcase your cricket knowledge, and win exciting cash prizes. With realistic gameplay mechanics and fair play guaranteed, this is the ultimate cricket gaming experience for Indian players.",
+    "features": [
+      "Real-time multiplayer cricket matches",
+      "Multiple game modes and tournaments",
+      "Skill-based gameplay with fair rewards",
+      "Instant withdrawals to your bank account",
+      "24/7 customer support",
+      "Secure and encrypted transactions"
+    ],
+    "screenshots": [
+      "/images/games/screenshots/9-wickets-1.webp",
+      "/images/games/screenshots/9-wickets-2.webp",
+      "/images/games/screenshots/9-wickets-3.webp",
+      "/images/games/screenshots/9-wickets-4.webp"
+    ],
+    "reviews": [
+      {
+        "name": "Rohit Sharma",
+        "rating": 5,
+        "comment": "Amazing cricket game! Won ₹5000 in my first week. Highly recommended!",
+        "date": "2024-05-15",
+        "verified": true
+      },
+      {
+        "name": "Priya Patel",
+        "rating": 4,
+        "comment": "Great graphics and smooth gameplay. Love the tournament mode!",
+        "date": "2024-05-10",
+        "verified": true
+      },
+      {
+        "name": "Vikram Singh",
+        "rating": 5,
+        "comment": "Best cricket game for real money. Fair play and quick withdrawals.",
+        "date": "2024-05-08",
+        "verified": true
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is 9 Wickets legal to play in India?",
+        "answer": "Yes, 9 Wickets is completely legal in India as it's a skill-based game. We comply with all Indian gaming regulations and laws."
+      },
+      {
+        "question": "How do I withdraw my winnings?",
+        "answer": "You can instantly withdraw your winnings to your bank account via UPI, Paytm, or direct bank transfer. Minimum withdrawal is ₹50."
+      },
+      {
+        "question": "What is the minimum entry fee?",
+        "answer": "Entry fees start from as low as ₹5 for practice matches and go up to ₹500+ for premium tournaments."
+      },
+      {
+        "question": "Is the game fair and not rigged?",
+        "answer": "Absolutely! We use certified RNG technology and all matches are monitored for fair play. We maintain complete transparency in our gaming algorithms."
+      }
+    ]
+  },
+  "aviator": {
+    "name": "Aviator",
+    "slug": "aviator",
+    "icon": "/images/games/app03-Aviator.webp",
+    "heroImage": "/images/games/app03-Aviator.webp",
+    "category": "Crash Game",
+    "rating": 4.8,
+    "downloads": "5M+",
+    "size": "25MB",
+    "version": "3.2.1",
+    "developer": "Spribe Gaming",
+    "shortDescription": "The most popular crash game with multipliers up to 1000x your bet!",
+    "description": "Aviator is the world's most popular crash game that has taken the gaming world by storm. Watch the airplane take off and decide when to cash out before it flies away. With multipliers that can reach 1000x or more, every round is filled with excitement and potential big wins. Simple to play but impossible to master!",
+    "features": [
+      "Live multiplayer crash game",
+      "Multipliers up to 1000x and beyond",
+      "Auto cash-out feature",
+      "Live chat with other players",
+      "Provably fair algorithm",
+      "Instant deposits and withdrawals"
+    ],
+    "screenshots": [
+      "/images/games/screenshots/aviator-1.webp",
+      "/images/games/screenshots/aviator-2.webp",
+      "/images/games/screenshots/aviator-3.webp",
+      "/images/games/screenshots/aviator-4.webp"
+    ],
+    "reviews": [
+      {
+        "name": "Arjun Kumar",
+        "rating": 5,
+        "comment": "Hit 100x multiplier yesterday! This game is pure adrenaline rush.",
+        "date": "2024-05-16",
+        "verified": true
+      },
+      {
+        "name": "Sneha Reddy",
+        "rating": 5,
+        "comment": "Love the simplicity and excitement. Won big multiple times!",
+        "date": "2024-05-12",
+        "verified": true
+      },
+      {
+        "name": "Rajesh Gupta",
+        "rating": 4,
+        "comment": "Great game but requires patience and strategy. Highly addictive!",
+        "date": "2024-05-09",
+        "verified": true
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How does Aviator game work?",
+        "answer": "In Aviator, you place a bet and watch an airplane take off. The multiplier increases as the plane climbs higher. You must cash out before the plane flies away to win your bet multiplied by the current multiplier."
+      },
+      {
+        "question": "What's the maximum multiplier possible?",
+        "answer": "While the multiplier can theoretically go infinitely high, most rounds end between 1x-10x. Occasionally, you might see multipliers of 100x, 500x, or even 1000x!"
+      },
+      {
+        "question": "Is there a strategy to win at Aviator?",
+        "answer": "Aviator is based on a random number generator, so there's no guaranteed strategy. However, many players use auto cash-out features and bet management strategies to optimize their gameplay."
+      },
+      {
+        "question": "Can I play Aviator for free?",
+        "answer": "Yes, you can try the demo version to understand the game mechanics before playing with real money."
+      }
+    ]
+  },
+  "andar-bahar": {
+    "name": "Andar Bahar",
+    "slug": "andar-bahar",
+    "icon": "/images/games/app09-AndarBahar.webp",
+    "heroImage": "/images/games/app09-AndarBahar.webp",
+    "category": "Card Game",
+    "rating": 4.6,
+    "downloads": "3M+",
+    "size": "30MB",
+    "version": "1.8.3",
+    "developer": "Traditional Games Ltd",
+    "shortDescription": "Classic Indian card game with modern twists and real money rewards.",
+    "description": "Andar Bahar is India's most beloved traditional card game, now available with real money gameplay. This simple yet exciting game involves predicting which side (Andar or Bahar) the matching card will appear. With its roots deep in Indian culture and easy-to-understand rules, it's perfect for both beginners and experienced players.",
+    "features": [
+      "Traditional Indian card game",
+      "Live dealer and automated versions",
+      "Multiple betting options",
+      "Side bets for bigger wins",
+      "Cultural music and themes",
+      "Quick rounds and instant results"
+    ],
+    "screenshots": [
+      "/images/games/screenshots/andar-bahar-1.webp",
+      "/images/games/screenshots/andar-bahar-2.webp",
+      "/images/games/screenshots/andar-bahar-3.webp",
+      "/images/games/screenshots/andar-bahar-4.webp"
+    ],
+    "reviews": [
+      {
+        "name": "Kavita Sharma",
+        "rating": 5,
+        "comment": "My favorite childhood game now with real money! Nostalgic and profitable.",
+        "date": "2024-05-14",
+        "verified": true
+      },
+      {
+        "name": "Manoj Tiwari",
+        "rating": 4,
+        "comment": "Simple rules, quick games, and good winnings. Perfect for lunch breaks!",
+        "date": "2024-05-11",
+        "verified": true
+      },
+      {
+        "name": "Deepika Nair",
+        "rating": 5,
+        "comment": "Love the traditional feel with modern interface. Won ₹2000 yesterday!",
+        "date": "2024-05-07",
+        "verified": true
+      }
+    ],
+    "faqs": [
+      {
+        "question": "How do you play Andar Bahar?",
+        "answer": "A card is drawn from the deck and placed in the middle. You bet on whether the next matching card will appear on the Andar (left) or Bahar (right) side. It's that simple!"
+      },
+      {
+        "question": "What are the odds in Andar Bahar?",
+        "answer": "The basic Andar and Bahar bets typically pay 1:1, but side bets can offer much higher payouts ranging from 5:1 to 120:1 depending on the specific bet."
+      },
+      {
+        "question": "Can I play with live dealers?",
+        "answer": "Yes! We offer both automated and live dealer versions of Andar Bahar for an authentic casino experience."
+      },
+      {
+        "question": "Is there any skill involved in Andar Bahar?",
+        "answer": "While primarily a game of chance, experienced players often use betting strategies and card counting techniques to improve their odds."
+      }
+    ]
+  }
+} 
