@@ -1,11 +1,1372 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const title = "WPL - Win Play Live | Real Money Gaming Platform";
+const description = "Join WPL for exciting real money games. Play Ludo, Snakes & Ladders, and more skill-based games. Download now and start winning!";
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="real money games, ludo, snakes ladders, skill games, online gaming, win money, WPL" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wpl-games.pages.dev/" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://wpl-games.pages.dev/" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/og-image.jpg" />
+
+    <title>{title}</title>
+    
+    <!-- JSON-LD Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://wpl-games.pages.dev/#organization",
+          "name": "WPL - Win Play Live",
+          "url": "https://wpl-games.pages.dev/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://wpl-games.pages.dev/logo.webp"
+          },
+          "description": "India's most trusted real money gaming platform for skill-based games",
+          "sameAs": [
+            "https://www.vegas11.love/?uagt=vegas0904&path=signup"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://wpl-games.pages.dev/#website",
+          "url": "https://wpl-games.pages.dev/",
+          "name": "WPL - Win Play Live | Real Money Gaming Platform",
+          "description": "Join WPL for exciting real money games. Play Ludo, Snakes & Ladders, and more skill-based games. Download now and start winning!",
+          "publisher": {
+            "@id": "https://wpl-games.pages.dev/#organization"
+          },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://wpl-games.pages.dev/?search={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "WPL Gaming App",
+          "applicationCategory": "GameApplication",
+          "operatingSystem": "Android",
+          "downloadUrl": "https://app.vegas1.in/vegas0901.apk",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "INR"
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "reviewCount": "25847",
+            "bestRating": "5",
+            "worstRating": "1"
+          }
+        },
+        {
+          "@type": "VideoGame",
+          "name": "Ludo Supreme",
+          "description": "Classic Ludo with exciting twists. Play with real players and win cash prizes.",
+          "genre": "Board Game",
+          "gamePlatform": "Android",
+          "offers": {
+            "@type": "Offer",
+            "price": "10",
+            "priceCurrency": "INR"
+          }
+        },
+        {
+          "@type": "VideoGame",
+          "name": "Aviator",
+          "description": "Popular crash game for real money gaming",
+          "genre": "Casino Game",
+          "gamePlatform": "Web Browser"
+        },
+        {
+          "@type": "VideoGame",
+          "name": "Andar Bahar",
+          "description": "Traditional Indian card game for real money",
+          "genre": "Card Game",
+          "gamePlatform": "Web Browser"
+        },
+        {
+          "@type": "VideoGame",
+          "name": "Rummy",
+          "description": "Popular Indian skill-based card game",
+          "genre": "Card Game",
+          "gamePlatform": "Web Browser"
+        }
+      ]
+    }
+    </script>
+    
+    <style>
+      /* CSS Reset for body margin and prevent horizontal overflow */
+      * {
+        box-sizing: border-box;
+      }
+      
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+      <div class="container mx-auto px-3 xs:px-4 py-2 xs:py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2 xs:space-x-3">
+            <a href="#home" class="flex items-center space-x-2 xs:space-x-3 hover:opacity-80 transition-opacity">
+              <img src="/logo.webp" alt="WPL Logo" class="w-8 h-8 xs:w-10 xs:h-10 object-contain" />
+              <span class="text-xl xs:text-2xl font-display font-bold text-gradient">WPL</span>
+            </a>
+          </div>
+          
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="#games" class="text-gray-300 hover:text-primary-400 transition-colors">Games</a>
+            <a href="#payment" class="text-gray-300 hover:text-primary-400 transition-colors">Payment</a>
+            <a href="#testimonials" class="text-gray-300 hover:text-primary-400 transition-colors">Reviews</a>
+            <a href="#download" class="text-gray-300 hover:text-primary-400 transition-colors">Download</a>
+          </div>
+
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             class="btn-primary text-xs xs:text-sm md:text-base px-3 xs:px-4 py-2 xs:py-3"
+             target="_blank" rel="noopener noreferrer">
+            Play Now
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center pt-16 xs:pt-20 relative overflow-hidden w-full">
+      <!-- Background Video -->
+      <video 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        class="absolute inset-0 w-full h-full object-cover z-0"
+        poster="/logo.webp">
+        <source src="/WPL-hero-new.webm" type="video/webm">
+        Your browser does not support the video tag.
+      </video>
+      
+      <!-- Video Overlay -->
+      <div class="absolute inset-0 bg-black/40 z-10"></div>
+
+      <div class="container mx-auto px-3 xs:px-4 relative z-20 w-full">
+        <div class="max-w-4xl w-full">
+          <!-- Content positioned to the left -->
+          <div class="text-left lg:text-left max-w-2xl w-full">
+            <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-4 xs:mb-6 text-shadow-lg animate-fade-in leading-tight">
+              Win <span class="text-gold-400">Real Money</span><br>
+              Playing <span class="text-secondary-400">Skill Games</span>
+            </h1>
+            
+            <p class="text-base xs:text-lg md:text-xl text-gray-200 mb-6 xs:mb-8 max-w-xl animate-slide-up leading-relaxed">
+              Join millions of players in India's most trusted real money gaming platform. 
+              Play Ludo, Snakes & Ladders, and more exciting games to win cash prizes!
+            </p>
+
+            <div class="flex flex-col xs:flex-row gap-3 xs:gap-4 justify-start items-stretch xs:items-start mb-8 xs:mb-12 animate-slide-up w-full" style="animation-delay: 0.3s;">
+              <a href="https://app.vegas1.in/vegas0901.apk" 
+                 class="btn-hero-primary glow-primary text-base xs:text-lg w-full xs:w-auto relative group animate-float animate-pulse-glow"
+                 download>
+                <!-- Shimmer Effect -->
+                <div class="absolute inset-0 shimmer-effect animate-shimmer opacity-0 group-hover:opacity-100 rounded-xl"></div>
+                <!-- Pulse Ring -->
+                <div class="absolute inset-0 rounded-xl bg-primary-500 opacity-20 animate-ping"></div>
+                <span class="relative z-10 flex items-center justify-center">
+                  <span class="mr-2 text-lg xs:text-xl animate-bounce">📱</span>
+                  Download App
+                </span>
+              </a>
+              <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+                 class="btn-hero-outline glow-secondary text-base xs:text-lg w-full xs:w-auto relative group animate-float"
+                 style="animation-delay: 0.5s;"
+                 target="_blank" rel="noopener noreferrer">
+                <!-- Shimmer Effect -->
+                <div class="absolute inset-0 shimmer-effect animate-shimmer opacity-0 group-hover:opacity-100 rounded-xl"></div>
+                <!-- Pulse Ring -->
+                <div class="absolute inset-0 rounded-xl border-2 border-secondary-500 opacity-30 animate-ping"></div>
+                <span class="relative z-10 flex items-center justify-center">
+                  <span class="mr-2 text-lg xs:text-xl animate-bounce" style="animation-delay: 0.2s;">🎮</span>
+                  Play Online
+                </span>
+              </a>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 xs:grid-cols-2 md:grid-cols-4 gap-3 xs:gap-6 max-w-2xl animate-slide-up w-full" style="animation-delay: 0.6s;">
+              <div class="text-left">
+                <div class="text-xl xs:text-2xl md:text-3xl font-bold text-gold-400">10M+</div>
+                <div class="text-xs xs:text-sm text-gray-300">Players</div>
+              </div>
+              <div class="text-left">
+                <div class="text-xl xs:text-2xl md:text-3xl font-bold text-secondary-400">₹25Cr+</div>
+                <div class="text-xs xs:text-sm text-gray-300">Daily Winnings</div>
+              </div>
+              <div class="text-left">
+                <div class="text-xl xs:text-2xl md:text-3xl font-bold text-accent-400">100%</div>
+                <div class="text-xs xs:text-sm text-gray-300">Safe & Secure</div>
+              </div>
+              <div class="text-left">
+                <div class="text-xl xs:text-2xl md:text-3xl font-bold text-primary-400">24/7</div>
+                <div class="text-xs xs:text-sm text-gray-300">Support</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="py-12 xs:py-16 md:py-20 bg-gray-800">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center mb-12 xs:mb-16">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+            Popular Games
+          </h2>
+          <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto px-2 xs:px-0">
+            Choose from our exciting collection of skill-based games and start winning real money today!
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 xs:gap-6 md:gap-8">
+          <!-- Ludo Game -->
+          <div class="card bg-gray-900 border border-gray-700 hover:border-primary-500 transition-all duration-300 group">
+            <div class="h-32 xs:h-40 md:h-48 bg-gradient-to-br from-primary-500 to-primary-700 rounded-lg mb-4 flex items-center justify-center">
+              <div class="text-4xl xs:text-5xl md:text-6xl">🎲</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2 group-hover:text-primary-400 transition-colors">Ludo Supreme</h3>
+            <p class="text-sm xs:text-base text-gray-400 mb-4">Classic Ludo with exciting twists. Play with real players and win cash prizes.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-secondary-400 font-semibold text-sm xs:text-base">Entry: ₹10+</span>
+              <span class="text-gold-400 font-semibold text-sm xs:text-base">Win: ₹1000+</span>
+            </div>
+          </div>
+
+          <!-- Snakes & Ladders -->
+          <div class="card bg-gray-900 border border-gray-700 hover:border-secondary-500 transition-all duration-300 group">
+            <div class="h-32 xs:h-40 md:h-48 bg-gradient-to-br from-secondary-500 to-secondary-700 rounded-lg mb-4 flex items-center justify-center">
+              <div class="text-4xl xs:text-5xl md:text-6xl">🐍</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2 group-hover:text-secondary-400 transition-colors">Snakes & Ladders Plus</h3>
+            <p class="text-sm xs:text-base text-gray-400 mb-4">Enhanced version of the classic board game with multiple tokens and strategies.</p>
+            <div class="flex justify-between items-center">
+              <span class="text-secondary-400 font-semibold text-sm xs:text-base">Entry: ₹5+</span>
+              <span class="text-gold-400 font-semibold text-sm xs:text-base">Win: ₹500+</span>
+            </div>
+          </div>
+
+          <!-- Trump Cards -->
+          <div class="card bg-gray-900 border border-gray-700 hover:border-accent-500 transition-all duration-300 group">
+            <div class="h-32 xs:h-40 md:h-48 bg-gradient-to-br from-accent-500 to-accent-700 rounded-lg mb-4 flex items-center justify-center">
+              <div class="text-4xl xs:text-5xl md:text-6xl">🃏</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2 group-hover:text-accent-400 transition-colors">Trump Cards Mania</h3>
+            <p class="text-sm xs:text-base text-gray-400 mb-4">Cricket-based card game featuring IPL players. Test your cricket knowledge!</p>
+            <div class="flex justify-between items-center">
+              <span class="text-secondary-400 font-semibold text-sm xs:text-base">Entry: ₹20+</span>
+              <span class="text-gold-400 font-semibold text-sm xs:text-base">Win: ₹2000+</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Real Cash Games Section -->
+    <section id="popular-games" class="py-12 xs:py-16 md:py-20 bg-gray-900">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center mb-12 xs:mb-16">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+            Popular Real Cash Games
+          </h2>
+          <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto px-2 xs:px-0">
+            Discover our most popular real money games and start winning today! Choose from a wide variety of exciting games including Aviator, Andar Bahar, Rummy, and more.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 xs:grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 gap-3 xs:gap-4 md:gap-6">
+          <!-- 9 Wickets -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-primary-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play 9 Wickets - Real Money Cricket Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app01-9Wickets.webp" alt="9 Wickets - Cricket Real Money Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-primary-400 transition-colors truncate px-1">9 Wickets</h3>
+          </a>
+
+          <!-- Gold Ganesha -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-gold-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Gold Ganesha - Slot Game for Real Money">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app02-IndiaGoldGanesha.webp" alt="Gold Ganesha - Indian Themed Slot Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-gold-400 transition-colors truncate px-1">Gold Ganesha</h3>
+          </a>
+
+          <!-- Aviator -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-accent-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Aviator - Crash Game Real Money">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app03-Aviator.webp" alt="Aviator - Popular Crash Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-accent-400 transition-colors truncate px-1">Aviator</h3>
+          </a>
+
+          <!-- Evo Live -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-secondary-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Evo Live - Live Casino Games">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app04-EvoLive.webp" alt="Evo Live - Live Casino Real Money" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-secondary-400 transition-colors truncate px-1">Evo Live</h3>
+          </a>
+
+          <!-- Sexy Baccarat -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-primary-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Sexy Baccarat - Live Baccarat Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app05-Sexy-Baccarat.webp" alt="Sexy Baccarat - Live Dealer Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-primary-400 transition-colors truncate px-1">Sexy Baccarat</h3>
+          </a>
+
+          <!-- PlayTech Baccarat -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-gold-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play PlayTech Baccarat - Premium Baccarat Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app06-PlayTech-Baccarat.webp" alt="PlayTech Baccarat - Professional Baccarat" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-gold-400 transition-colors truncate px-1">PlayTech Baccarat</h3>
+          </a>
+
+          <!-- Dice -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-accent-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Dice Game - Real Money Dice">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app07-Dice.webp" alt="Dice Game - Real Money Casino Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-accent-400 transition-colors truncate px-1">Dice</h3>
+          </a>
+
+          <!-- Mines -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-secondary-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Mines Game - Strategy Based Real Money Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app08-Mines.webp" alt="Mines Game - Strategy Real Money Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-secondary-400 transition-colors truncate px-1">Mines</h3>
+          </a>
+
+          <!-- Andar Bahar (Jili) -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-primary-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Andar Bahar - Traditional Indian Card Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app09-AndarBahar.webp" alt="Andar Bahar - Indian Real Money Card Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-primary-400 transition-colors truncate px-1">Andar Bahar</h3>
+          </a>
+
+          <!-- Rummy -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-gold-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Rummy Online - Skill Based Card Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app10-Rummy.webp" alt="Rummy - Popular Indian Card Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-gold-400 transition-colors truncate px-1">Rummy</h3>
+          </a>
+
+          <!-- 7 up 7 Down -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-accent-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play 7 up 7 Down - Lucky Number Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app11-7up7down.webp" alt="7 up 7 Down - Real Money Lucky Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-accent-400 transition-colors truncate px-1">7 up 7 Down</h3>
+          </a>
+
+          <!-- Jili Andar Bahar -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-secondary-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Jili Andar Bahar - Enhanced Indian Card Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app12-AndarBahar.webp" alt="Jili Andar Bahar - Premium Indian Card Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-secondary-400 transition-colors truncate px-1">Jili Andar Bahar</h3>
+          </a>
+
+          <!-- Baccarat -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-primary-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Baccarat Online - Classic Casino Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app13-Baccarat.webp" alt="Baccarat - Classic Real Money Casino Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-primary-400 transition-colors truncate px-1">Baccarat</h3>
+          </a>
+
+          <!-- Super Ace -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-gold-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Super Ace - High Stakes Card Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app14-SuperAce.webp" alt="Super Ace - Premium Real Money Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-gold-400 transition-colors truncate px-1">Super Ace</h3>
+          </a>
+
+          <!-- Golden Empire -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-accent-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Golden Empire - Imperial Themed Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app15-GoldenEmpire.webp" alt="Golden Empire - Imperial Real Money Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-accent-400 transition-colors truncate px-1">Golden Empire</h3>
+          </a>
+
+          <!-- Money Coming -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-secondary-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Money Coming - Fortune Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app16-MoneyComing.webp" alt="Money Coming - Fortune Real Money Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-secondary-400 transition-colors truncate px-1">Money Coming</h3>
+          </a>
+
+          <!-- Aero -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-primary-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Aero - Aviation Themed Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app17-Aero.webp" alt="Aero - Aviation Real Money Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-primary-400 transition-colors truncate px-1">Aero</h3>
+          </a>
+
+          <!-- Wicket Blast -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-gold-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Wicket Blast - Cricket Action Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app18-WicketBlast.webp" alt="Wicket Blast - Cricket Real Money Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-gold-400 transition-colors truncate px-1">Wicket Blast</h3>
+          </a>
+
+          <!-- Fast Fielder -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-accent-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Fast Fielder - Cricket Fielding Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app19-FastField.webp" alt="Fast Fielder - Cricket Real Money Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-accent-400 transition-colors truncate px-1">Fast Fielder</h3>
+          </a>
+
+          <!-- Spin Strike -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-secondary-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Spin Strike - Bowling Action Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app20-SpinStrike.webp" alt="Spin Strike - Cricket Real Money Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-secondary-400 transition-colors truncate px-1">Spin Strike</h3>
+          </a>
+
+          <!-- CrashX -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-primary-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play CrashX - Crash Game Real Money">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app21-CrashX.webp" alt="CrashX - High Stakes Crash Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-primary-400 transition-colors truncate px-1">CrashX</h3>
+          </a>
+
+          <!-- Mines (Second) -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-gold-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Mines Game - Premium Strategy Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app22-Mines.webp" alt="Mines - Premium Strategy Real Money Game" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-gold-400 transition-colors truncate px-1">Mines</h3>
+          </a>
+
+          <!-- Cricket Boom -->
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             target="_blank" rel="noopener noreferrer"
+             class="game-card bg-gray-800 border border-gray-700 hover:border-accent-500 transition-all duration-300 group cursor-pointer block"
+             aria-label="Play Cricket Boom - Cricket Tournament Game">
+            <div class="aspect-square bg-gradient-to-br from-gray-700 to-gray-800 rounded-lg mb-2 xs:mb-3 overflow-hidden">
+              <img src="/images/games/app23-CricketBoom.webp" alt="Cricket Boom - Cricket Real Money Tournament" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" loading="lazy" />
+            </div>
+            <h3 class="text-xs xs:text-sm font-semibold text-center text-white group-hover:text-accent-400 transition-colors truncate px-1">Cricket Boom</h3>
+          </a>
+        </div>
+
+        <div class="text-center mt-8 xs:mt-12">
+          <p class="text-sm text-gray-400 mb-4">🎮 More games available in the app</p>
+          <a href="https://app.vegas1.in/vegas0901.apk" 
+             class="btn-primary text-sm xs:text-base px-6 py-3"
+             download>
+            Download App to Play All Games
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-12 xs:py-16 md:py-20 bg-gray-900">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center mb-12 xs:mb-16">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+            Why Choose WPL?
+          </h2>
+          <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto px-2 xs:px-0">
+            Experience the best in real money gaming with our secure, fair, and exciting platform.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-6 xs:gap-8">
+          <div class="text-center group">
+            <div class="w-12 h-12 xs:w-16 xs:h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3 xs:mb-4 group-hover:scale-110 transition-transform">
+              <div class="text-xl xs:text-2xl">🛡️</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2">100% Safe & Secure</h3>
+            <p class="text-sm xs:text-base text-gray-400">Your money and data are protected with bank-level security and encryption.</p>
+          </div>
+
+          <div class="text-center group">
+            <div class="w-12 h-12 xs:w-16 xs:h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-3 xs:mb-4 group-hover:scale-110 transition-transform">
+              <div class="text-xl xs:text-2xl">⚡</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2">Instant Withdrawals</h3>
+            <p class="text-sm xs:text-base text-gray-400">Withdraw your winnings instantly to your bank account or UPI.</p>
+          </div>
+
+          <div class="text-center group">
+            <div class="w-12 h-12 xs:w-16 xs:h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-3 xs:mb-4 group-hover:scale-110 transition-transform">
+              <div class="text-xl xs:text-2xl">👥</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2">Real Players</h3>
+            <p class="text-sm xs:text-base text-gray-400">Play against verified real players from across India.</p>
+          </div>
+
+          <div class="text-center group">
+            <div class="w-12 h-12 xs:w-16 xs:h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto mb-3 xs:mb-4 group-hover:scale-110 transition-transform">
+              <div class="text-xl xs:text-2xl">🏆</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2">Fair Play</h3>
+            <p class="text-sm xs:text-base text-gray-400">RNG certified games ensure fair play for all participants.</p>
+          </div>
+
+          <div class="text-center group">
+            <div class="w-12 h-12 xs:w-16 xs:h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3 xs:mb-4 group-hover:scale-110 transition-transform">
+              <div class="text-xl xs:text-2xl">🎧</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2">24/7 Support</h3>
+            <p class="text-sm xs:text-base text-gray-400">Get help anytime with our dedicated customer support team.</p>
+          </div>
+
+          <div class="text-center group">
+            <div class="w-12 h-12 xs:w-16 xs:h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-3 xs:mb-4 group-hover:scale-110 transition-transform">
+              <div class="text-xl xs:text-2xl">🎁</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2">Daily Bonuses</h3>
+            <p class="text-sm xs:text-base text-gray-400">Enjoy daily login bonuses and special promotional offers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment Methods Section -->
+    <section id="payment" class="py-12 xs:py-16 md:py-20 bg-gray-800">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center mb-12 xs:mb-16">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+            Payment Methods
+          </h2>
+          <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto px-2 xs:px-0">
+            We support all popular Indian payment methods for seamless deposits and withdrawals
+          </p>
+        </div>
+
+        <div class="grid grid-cols-2 xs:grid-cols-3 lg:grid-cols-6 gap-4 xs:gap-6 max-w-4xl mx-auto">
+          <!-- UPI -->
+          <div class="card bg-gray-900 border border-gray-700 hover:border-primary-500 transition-all duration-300 text-center group">
+            <div class="w-12 h-12 xs:w-16 xs:h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <div class="text-xl xs:text-2xl">💳</div>
+            </div>
+            <h3 class="text-sm xs:text-base font-semibold">UPI</h3>
+            <p class="text-xs text-gray-400 mt-1">Instant & Secure</p>
+          </div>
+
+          <!-- Paytm -->
+          <div class="card bg-gray-900 border border-gray-700 hover:border-secondary-500 transition-all duration-300 text-center group">
+            <div class="w-12 h-12 xs:w-16 xs:h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <div class="text-xl xs:text-2xl">📱</div>
+            </div>
+            <h3 class="text-sm xs:text-base font-semibold">Paytm</h3>
+            <p class="text-xs text-gray-400 mt-1">Digital Wallet</p>
+          </div>
+
+          <!-- PhonePe -->
+          <div class="card bg-gray-900 border border-gray-700 hover:border-accent-500 transition-all duration-300 text-center group">
+            <div class="w-12 h-12 xs:w-16 xs:h-16 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <div class="text-xl xs:text-2xl">📲</div>
+            </div>
+            <h3 class="text-sm xs:text-base font-semibold">PhonePe</h3>
+            <p class="text-xs text-gray-400 mt-1">Quick Pay</p>
+          </div>
+
+          <!-- Google Pay -->
+          <div class="card bg-gray-900 border border-gray-700 hover:border-gold-500 transition-all duration-300 text-center group">
+            <div class="w-12 h-12 xs:w-16 xs:h-16 bg-gold-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <div class="text-xl xs:text-2xl">🌟</div>
+            </div>
+            <h3 class="text-sm xs:text-base font-semibold">Google Pay</h3>
+            <p class="text-xs text-gray-400 mt-1">Fast Transfer</p>
+          </div>
+
+          <!-- Net Banking -->
+          <div class="card bg-gray-900 border border-gray-700 hover:border-primary-500 transition-all duration-300 text-center group">
+            <div class="w-12 h-12 xs:w-16 xs:h-16 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <div class="text-xl xs:text-2xl">🏦</div>
+            </div>
+            <h3 class="text-sm xs:text-base font-semibold">Net Banking</h3>
+            <p class="text-xs text-gray-400 mt-1">All Banks</p>
+          </div>
+
+          <!-- Debit/Credit Cards -->
+          <div class="card bg-gray-900 border border-gray-700 hover:border-secondary-500 transition-all duration-300 text-center group">
+            <div class="w-12 h-12 xs:w-16 xs:h-16 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+              <div class="text-xl xs:text-2xl">💯</div>
+            </div>
+            <h3 class="text-sm xs:text-base font-semibold">Cards</h3>
+            <p class="text-xs text-gray-400 mt-1">Visa & Mastercard</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-8 xs:mt-12">
+          <p class="text-sm text-gray-400">🔒 All transactions are secured with 256-bit SSL encryption</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Online Cash Game Reviews Section -->
+    <section id="reviews" class="py-12 xs:py-16 md:py-20 bg-gray-900">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center mb-12 xs:mb-16">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+            Player Reviews
+          </h2>
+          <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto px-2 xs:px-0">
+            See what our players are saying about their winning experience on WPL
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-3 gap-6 xs:gap-8 max-w-4xl mx-auto">
+          <!-- Overall Rating -->
+          <div class="card bg-gray-800 border border-gray-700 text-center">
+            <div class="mb-4">
+              <div class="text-4xl xs:text-5xl font-bold text-gold-400" id="overall-rating">4.8</div>
+              <div class="flex justify-center items-center mt-2 mb-2">
+                <div class="flex text-gold-400 text-lg xs:text-xl">★★★★★</div>
+              </div>
+              <p class="text-sm text-gray-400">Overall Rating</p>
+              <p class="text-xs text-gray-500 mt-1">Based on <span id="total-reviews">25,847</span> reviews</p>
+            </div>
+          </div>
+
+          <!-- Game Experience -->
+          <div class="card bg-gray-800 border border-gray-700 text-center">
+            <div class="mb-4">
+              <div class="text-4xl xs:text-5xl font-bold text-secondary-400" id="game-rating">4.9</div>
+              <div class="flex justify-center items-center mt-2 mb-2">
+                <div class="flex text-secondary-400 text-lg xs:text-xl">★★★★★</div>
+              </div>
+              <p class="text-sm text-gray-400">Game Experience</p>
+              <p class="text-xs text-gray-500 mt-1">Smooth & Fun Gameplay</p>
+            </div>
+          </div>
+
+          <!-- Payout Speed -->
+          <div class="card bg-gray-800 border border-gray-700 text-center">
+            <div class="mb-4">
+              <div class="text-4xl xs:text-5xl font-bold text-accent-400" id="payout-rating">4.7</div>
+              <div class="flex justify-center items-center mt-2 mb-2">
+                <div class="flex text-accent-400 text-lg xs:text-xl">★★★★★</div>
+              </div>
+              <p class="text-sm text-gray-400">Payout Speed</p>
+              <p class="text-xs text-gray-500 mt-1">Fast Withdrawals</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8 xs:mt-12">
+          <div class="inline-flex items-center space-x-2 text-sm text-gray-400">
+            <span>⭐</span>
+            <span>Live reviews updated every minute</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-12 xs:py-16 md:py-20 bg-gray-800">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center mb-12 xs:mb-16">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+            What Players Say
+          </h2>
+          <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto px-2 xs:px-0">
+            Real testimonials from our winning players across India
+          </p>
+        </div>
+
+        <!-- Testimonials Slider -->
+        <div class="relative max-w-4xl mx-auto">
+          <div class="overflow-hidden">
+            <div class="testimonials-container flex transition-transform duration-500 ease-in-out" id="testimonials-slider">
+              <!-- Testimonial 1 -->
+              <div class="testimonial-slide min-w-full lg:min-w-1/3 px-2 xs:px-4">
+                <div class="card bg-gray-900 border border-gray-700 text-center">
+                  <div class="mb-4">
+                    <div class="w-16 h-16 xs:w-20 xs:h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div class="text-2xl xs:text-3xl">👨</div>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">Rajesh Kumar</h4>
+                    <p class="text-xs text-gray-400">Mumbai, Maharashtra</p>
+                  </div>
+                  <div class="flex justify-center mb-3">
+                    <div class="flex text-gold-400 text-sm">★★★★★</div>
+                  </div>
+                  <p class="text-sm text-gray-300 italic">
+                    "Won ₹50,000 in just one month! The games are fair and withdrawals are instant. Best gaming app ever!"
+                  </p>
+                  <div class="mt-3 text-xs text-secondary-400">
+                    Verified Winner
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 2 -->
+              <div class="testimonial-slide min-w-full lg:min-w-1/3 px-2 xs:px-4">
+                <div class="card bg-gray-900 border border-gray-700 text-center">
+                  <div class="mb-4">
+                    <div class="w-16 h-16 xs:w-20 xs:h-20 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div class="text-2xl xs:text-3xl">👩</div>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">Priya Sharma</h4>
+                    <p class="text-xs text-gray-400">Delhi</p>
+                  </div>
+                  <div class="flex justify-center mb-3">
+                    <div class="flex text-gold-400 text-sm">★★★★★</div>
+                  </div>
+                  <p class="text-sm text-gray-300 italic">
+                    "Amazing platform! I play during lunch breaks and have won multiple times. Customer support is excellent!"
+                  </p>
+                  <div class="mt-3 text-xs text-secondary-400">
+                    Daily Player
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 3 -->
+              <div class="testimonial-slide min-w-full lg:min-w-1/3 px-2 xs:px-4">
+                <div class="card bg-gray-900 border border-gray-700 text-center">
+                  <div class="mb-4">
+                    <div class="w-16 h-16 xs:w-20 xs:h-20 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div class="text-2xl xs:text-3xl">👨</div>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">Arjun Reddy</h4>
+                    <p class="text-xs text-gray-400">Bangalore, Karnataka</p>
+                  </div>
+                  <div class="flex justify-center mb-3">
+                    <div class="flex text-gold-400 text-sm">★★★★★</div>
+                  </div>
+                  <p class="text-sm text-gray-300 italic">
+                    "Perfect for skill-based gaming. I've improved my strategy and earnings. Safe and secure platform!"
+                  </p>
+                  <div class="mt-3 text-xs text-secondary-400">
+                    Strategy Expert
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 4 -->
+              <div class="testimonial-slide min-w-full lg:min-w-1/3 px-2 xs:px-4">
+                <div class="card bg-gray-900 border border-gray-700 text-center">
+                  <div class="mb-4">
+                    <div class="w-16 h-16 xs:w-20 xs:h-20 bg-gold-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div class="text-2xl xs:text-3xl">👩</div>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">Sneha Patel</h4>
+                    <p class="text-xs text-gray-400">Ahmedabad, Gujarat</p>
+                  </div>
+                  <div class="flex justify-center mb-3">
+                    <div class="flex text-gold-400 text-sm">★★★★★</div>
+                  </div>
+                  <p class="text-sm text-gray-300 italic">
+                    "Love the variety of games! Ludo is my favorite. Won enough to buy a new phone. Highly recommended!"
+                  </p>
+                  <div class="mt-3 text-xs text-secondary-400">
+                    Ludo Champion
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 5 -->
+              <div class="testimonial-slide min-w-full lg:min-w-1/3 px-2 xs:px-4">
+                <div class="card bg-gray-900 border border-gray-700 text-center">
+                  <div class="mb-4">
+                    <div class="w-16 h-16 xs:w-20 xs:h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div class="text-2xl xs:text-3xl">👨</div>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">Vikram Singh</h4>
+                    <p class="text-xs text-gray-400">Jaipur, Rajasthan</p>
+                  </div>
+                  <div class="flex justify-center mb-3">
+                    <div class="flex text-gold-400 text-sm">★★★★★</div>
+                  </div>
+                  <p class="text-sm text-gray-300 italic">
+                    "Been playing for 6 months. Consistent wins and quick payouts. This app changed my gaming experience!"
+                  </p>
+                  <div class="mt-3 text-xs text-secondary-400">
+                    Veteran Player
+                  </div>
+                </div>
+              </div>
+
+              <!-- Testimonial 6 -->
+              <div class="testimonial-slide min-w-full lg:min-w-1/3 px-2 xs:px-4">
+                <div class="card bg-gray-900 border border-gray-700 text-center">
+                  <div class="mb-4">
+                    <div class="w-16 h-16 xs:w-20 xs:h-20 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                      <div class="text-2xl xs:text-3xl">👩</div>
+                    </div>
+                    <h4 class="font-bold text-white mb-1">Kavya Nair</h4>
+                    <p class="text-xs text-gray-400">Chennai, Tamil Nadu</p>
+                  </div>
+                  <div class="flex justify-center mb-3">
+                    <div class="flex text-gold-400 text-sm">★★★★★</div>
+                  </div>
+                  <p class="text-sm text-gray-300 italic">
+                    "Great user interface and smooth gameplay. Trump Cards is addictive! Earned my month's extra income here."
+                  </p>
+                  <div class="mt-3 text-xs text-secondary-400">
+                    Card Game Pro
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Navigation Buttons -->
+          <button class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-primary-500 hover:bg-primary-600 text-white p-2 rounded-full opacity-80 hover:opacity-100 transition-all hidden lg:block" id="prev-testimonial">
+            ←
+          </button>
+          <button class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-primary-500 hover:bg-primary-600 text-white p-2 rounded-full opacity-80 hover:opacity-100 transition-all hidden lg:block" id="next-testimonial">
+            →
+          </button>
+
+          <!-- Dots Indicator -->
+          <div class="flex justify-center mt-6 space-x-2" id="testimonial-dots">
+            <button class="w-3 h-3 rounded-full bg-primary-500 transition-all" data-slide="0"></button>
+            <button class="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-500 transition-all" data-slide="1"></button>
+            <button class="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-500 transition-all" data-slide="2"></button>
+            <button class="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-500 transition-all lg:hidden" data-slide="3"></button>
+            <button class="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-500 transition-all lg:hidden" data-slide="4"></button>
+            <button class="w-3 h-3 rounded-full bg-gray-600 hover:bg-gray-500 transition-all lg:hidden" data-slide="5"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How to Install Section -->
+    <section id="install" class="py-12 xs:py-16 md:py-20 bg-gray-900">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center mb-12 xs:mb-16">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+            How to Install WPL App
+          </h2>
+          <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto px-2 xs:px-0">
+            Follow these simple steps to download and install the WPL app on your Android device
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xs:gap-8 max-w-5xl mx-auto">
+          <!-- Step 1 -->
+          <div class="text-center group">
+            <div class="relative mb-6">
+              <div class="w-16 h-16 xs:w-20 xs:h-20 bg-primary-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                <div class="text-2xl xs:text-3xl">📱</div>
+              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-gold-400 rounded-full flex items-center justify-center text-black font-bold text-sm">1</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2">Download APK</h3>
+            <p class="text-sm xs:text-base text-gray-400">Click the download button and save the WPL APK file to your device</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="text-center group">
+            <div class="relative mb-6">
+              <div class="w-16 h-16 xs:w-20 xs:h-20 bg-secondary-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                <div class="text-2xl xs:text-3xl">⚙️</div>
+              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-gold-400 rounded-full flex items-center justify-center text-black font-bold text-sm">2</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2">Enable Installation</h3>
+            <p class="text-sm xs:text-base text-gray-400">Go to Settings > Security and enable "Unknown Sources" to allow APK installation</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="text-center group">
+            <div class="relative mb-6">
+              <div class="w-16 h-16 xs:w-20 xs:h-20 bg-accent-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                <div class="text-2xl xs:text-3xl">📥</div>
+              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-gold-400 rounded-full flex items-center justify-center text-black font-bold text-sm">3</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2">Install App</h3>
+            <p class="text-sm xs:text-base text-gray-400">Locate the downloaded APK file and tap to install the WPL application</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="text-center group">
+            <div class="relative mb-6">
+              <div class="w-16 h-16 xs:w-20 xs:h-20 bg-gold-500 rounded-full flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-transform">
+                <div class="text-2xl xs:text-3xl">🎮</div>
+              </div>
+              <div class="absolute -top-2 -right-2 w-8 h-8 bg-gold-400 rounded-full flex items-center justify-center text-black font-bold text-sm">4</div>
+            </div>
+            <h3 class="text-lg xs:text-xl font-bold mb-2">Start Playing</h3>
+            <p class="text-sm xs:text-base text-gray-400">Open the app, create your account, and start playing to win real money!</p>
+          </div>
+        </div>
+
+        <div class="text-center mt-8 xs:mt-12">
+          <div class="bg-gray-800 border border-gray-700 rounded-lg p-4 xs:p-6 max-w-md mx-auto">
+            <div class="text-gold-400 text-2xl mb-2">💡</div>
+            <h4 class="font-bold mb-2">Pro Tip</h4>
+            <p class="text-sm text-gray-400">Make sure you have at least 50MB of free storage and a stable internet connection for the best experience.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs Section -->
+    <section id="faqs" class="py-12 xs:py-16 md:py-20 bg-gray-800">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center mb-12 xs:mb-16">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+            Frequently Asked Questions
+          </h2>
+          <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto px-2 xs:px-0">
+            Get answers to the most common questions about WPL gaming platform
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto space-y-4">
+          <!-- FAQ 1 -->
+          <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+            <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+              <span class="text-base xs:text-lg font-semibold">Is WPL legal and safe to play in India?</span>
+              <span class="faq-icon text-primary-400 text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+              <p class="text-sm xs:text-base text-gray-300">Yes, WPL is completely legal in India as we offer skill-based games. Our platform is secured with bank-level encryption and follows all Indian gaming regulations. We are registered and licensed to operate in India.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+            <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+              <span class="text-base xs:text-lg font-semibold">How can I withdraw my winnings?</span>
+              <span class="faq-icon text-primary-400 text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+              <p class="text-sm xs:text-base text-gray-300">You can withdraw your winnings instantly to your bank account via UPI, Paytm, PhonePe, Google Pay, or direct bank transfer. Minimum withdrawal amount is ₹50 and there are no hidden charges.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+            <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+              <span class="text-base xs:text-lg font-semibold">What is the minimum deposit amount?</span>
+              <span class="faq-icon text-primary-400 text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+              <p class="text-sm xs:text-base text-gray-300">The minimum deposit amount is just ₹10. You can deposit money using UPI, digital wallets, net banking, or debit/credit cards. All transactions are processed instantly and securely.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+            <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+              <span class="text-base xs:text-lg font-semibold">Are the games fair and not rigged?</span>
+              <span class="faq-icon text-primary-400 text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+              <p class="text-sm xs:text-base text-gray-300">Absolutely! All our games use certified Random Number Generator (RNG) technology to ensure fair play. We are audited by third-party agencies and maintain complete transparency in our gaming algorithms.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 5 -->
+          <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+            <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+              <span class="text-base xs:text-lg font-semibold">Can I play with my friends?</span>
+              <span class="faq-icon text-primary-400 text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+              <p class="text-sm xs:text-base text-gray-300">Yes! You can create private rooms and invite your friends to play together. You can also refer friends and earn bonus cash for every successful referral when they make their first deposit.</p>
+            </div>
+          </div>
+
+          <!-- FAQ 6 -->
+          <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+            <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+              <span class="text-base xs:text-lg font-semibold">What if I face any technical issues?</span>
+              <span class="faq-icon text-primary-400 text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+              <p class="text-sm xs:text-base text-gray-300">Our 24/7 customer support team is always ready to help you. You can reach us through live chat, email, or phone call. We also have a comprehensive help center with detailed guides and troubleshooting tips.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="text-center mt-8 xs:mt-12">
+          <p class="text-sm text-gray-400 mb-4">Still have questions?</p>
+          <a href="/contact" class="btn-primary text-sm xs:text-base px-6 py-3">Contact Support</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section id="download" class="py-12 xs:py-16 md:py-20 gradient-bg">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center max-w-3xl mx-auto">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-4 xs:mb-6 text-shadow-lg">
+            Download WPL App Now
+          </h2>
+          <p class="text-base xs:text-lg md:text-xl text-gray-200 mb-6 xs:mb-8 px-2 xs:px-0">
+            Get the best gaming experience on your mobile device. Available for Android devices.
+          </p>
+
+          <div class="flex flex-col xs:flex-row gap-4 justify-center items-center mb-6 xs:mb-8">
+            <a href="https://app.vegas1.in/vegas0901.apk" 
+               class="btn-primary text-base xs:text-lg px-6 xs:px-8 py-3 xs:py-4 w-full xs:w-auto flex items-center justify-center"
+               download>
+              <div class="text-xl xs:text-2xl mr-2 xs:mr-3">📱</div>
+              <div class="text-left">
+                <div class="text-xs">Download for</div>
+                <div class="font-bold">Android</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="text-xs xs:text-sm text-gray-300">
+            <p class="mb-2">🔒 100% Safe & Secure Download</p>
+            <p>📱 Compatible with Android 5.0 and above</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-8 xs:py-12">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 xs:gap-8">
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center space-x-2 xs:space-x-3 mb-3 xs:mb-4">
+              <img src="/logo.webp" alt="WPL Logo" class="w-8 h-8 xs:w-10 xs:h-10 object-contain" />
+              <span class="text-xl xs:text-2xl font-display font-bold text-gradient">WPL</span>
+            </div>
+            <p class="text-sm xs:text-base text-gray-400 mb-3 xs:mb-4 max-w-md">
+              India's most trusted real money gaming platform. Play skill-based games and win real cash prizes safely and securely.
+            </p>
+            <div class="flex space-x-3 xs:space-x-4">
+              <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                <div class="text-lg xs:text-xl">📘</div>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                <div class="text-lg xs:text-xl">🐦</div>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                <div class="text-lg xs:text-xl">📷</div>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                <div class="text-lg xs:text-xl">📺</div>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-base xs:text-lg font-bold mb-3 xs:mb-4">Quick Links</h3>
+            <ul class="space-y-1 xs:space-y-2">
+              <li><a href="#home" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Home</a></li>
+              <li><a href="#games" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Games</a></li>
+              <li><a href="#payment" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Payment</a></li>
+              <li><a href="#testimonials" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Reviews</a></li>
+              <li><a href="#download" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Download</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-base xs:text-lg font-bold mb-3 xs:mb-4">Support</h3>
+            <ul class="space-y-1 xs:space-y-2">
+              <li><a href="#" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Help Center</a></li>
+              <li><a href="#" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Contact Us</a></li>
+              <li><a href="#" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Privacy Policy</a></li>
+              <li><a href="#" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-6 xs:mt-8 pt-6 xs:pt-8 text-center">
+          <p class="text-xs xs:text-sm text-gray-400">
+            © 2024 WPL. All rights reserved. | 18+ Only | Play Responsibly
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Enhanced JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        
+        // Smooth Scrolling for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+          anchor.addEventListener('click', (e) => {
+            e.preventDefault();
+            const href = anchor.getAttribute('href');
+            if (href) {
+              const target = document.querySelector(href);
+              if (target) {
+                target.scrollIntoView({
+                  behavior: 'smooth',
+                  block: 'start'
+                });
+              }
+            }
+          });
+        });
+
+        // Dynamic Reviews Counter
+        function updateReviewsCounter() {
+          const reviewsElement = document.getElementById('total-reviews');
+          if (reviewsElement && reviewsElement.textContent) {
+            const currentReviews = parseInt(reviewsElement.textContent.replace(/,/g, ''));
+            const increment = Math.floor(Math.random() * 3) + 1; // Random 1-3
+            const newReviews = currentReviews + increment;
+            reviewsElement.textContent = newReviews.toLocaleString();
+          }
+        }
+
+        // Update reviews every 30 seconds
+        setInterval(updateReviewsCounter, 30000);
+
+        // Testimonials Slider
+        let currentSlide = 0;
+        const totalSlides = 6;
+        let slidesToShow = window.innerWidth >= 1024 ? 3 : 1;
+        const maxSlideIndex = totalSlides - slidesToShow;
+
+        const slider = document.getElementById('testimonials-slider');
+        const prevBtn = document.getElementById('prev-testimonial');
+        const nextBtn = document.getElementById('next-testimonial');
+        const dots = document.querySelectorAll('#testimonial-dots button');
+
+        function updateSliderTransform() {
+          if (slider) {
+            const translateX = -(currentSlide * (100 / slidesToShow));
+            slider.style.transform = `translateX(${translateX}%)`;
+          }
+        }
+
+        function updateDots() {
+          dots.forEach((dot, index) => {
+            if (index === currentSlide) {
+              dot.classList.remove('bg-gray-600');
+              dot.classList.add('bg-primary-500');
+            } else {
+              dot.classList.remove('bg-primary-500');
+              dot.classList.add('bg-gray-600');
+            }
+          });
+        }
+
+        function nextSlide() {
+          currentSlide = currentSlide >= maxSlideIndex ? 0 : currentSlide + 1;
+          updateSliderTransform();
+          updateDots();
+        }
+
+        function prevSlide() {
+          currentSlide = currentSlide <= 0 ? maxSlideIndex : currentSlide - 1;
+          updateSliderTransform();
+          updateDots();
+        }
+
+        // Go to specific slide
+        function goToSlide(slideIndex) {
+          currentSlide = Math.min(slideIndex, maxSlideIndex);
+          updateSliderTransform();
+          updateDots();
+        }
+
+        // Event listeners for testimonials
+        if (nextBtn) nextBtn.addEventListener('click', nextSlide);
+        if (prevBtn) prevBtn.addEventListener('click', prevSlide);
+
+        dots.forEach((dot, index) => {
+          dot.addEventListener('click', () => goToSlide(index));
+        });
+
+        // Auto-play testimonials (every 5 seconds)
+        setInterval(nextSlide, 5000);
+
+        // Handle window resize for responsive testimonials
+        window.addEventListener('resize', () => {
+          const newSlidesToShow = window.innerWidth >= 1024 ? 3 : 1;
+          if (newSlidesToShow !== slidesToShow) {
+            slidesToShow = newSlidesToShow;
+            const newMaxSlideIndex = totalSlides - slidesToShow;
+            if (currentSlide > newMaxSlideIndex) {
+              currentSlide = newMaxSlideIndex;
+            }
+            updateSliderTransform();
+            updateDots();
+          }
+        });
+
+        // FAQ Accordion
+        document.querySelectorAll('.faq-question').forEach(button => {
+          button.addEventListener('click', () => {
+            const faqItem = button.parentElement;
+            if (faqItem) {
+              const answer = faqItem.querySelector('.faq-answer');
+              const icon = button.querySelector('.faq-icon');
+              
+              if (answer && icon) {
+                const isOpen = !answer.classList.contains('hidden');
+                
+                // Close all other FAQs
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                  otherAnswer.classList.add('hidden');
+                });
+                document.querySelectorAll('.faq-icon').forEach(otherIcon => {
+                  otherIcon.textContent = '+';
+                });
+                
+                // Toggle current FAQ
+                if (!isOpen) {
+                  answer.classList.remove('hidden');
+                  icon.textContent = '−';
+                } else {
+                  answer.classList.add('hidden');
+                  icon.textContent = '+';
+                }
+              }
+            }
+          });
+        });
+
+        // Initialize slider
+        updateSliderTransform();
+        updateDots();
+
+        // Animate rating numbers on page load
+        function animateRatings() {
+          const ratingElements = [
+            { id: 'overall-rating', target: 4.8 },
+            { id: 'game-rating', target: 4.9 },
+            { id: 'payout-rating', target: 4.7 }
+          ];
+
+          ratingElements.forEach(({ id, target }) => {
+            const element = document.getElementById(id);
+            if (element) {
+              let current = 0;
+              const increment = target / 50; // 50 steps
+              const timer = setInterval(() => {
+                current += increment;
+                if (current >= target) {
+                  current = target;
+                  clearInterval(timer);
+                }
+                element.textContent = current.toFixed(1);
+              }, 30);
+            }
+          });
+        }
+
+        // Start rating animation after a delay
+        setTimeout(animateRatings, 1000);
+      });
+    </script>
+  </body>
+</html> 

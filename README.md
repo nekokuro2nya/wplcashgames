@@ -1,4 +1,135 @@
-# Astro Starter Kit: Basics
+# WPL - Win Play Live
+
+A modern real money gaming platform built with Astro and UnoCSS, designed for the Indian market.
+
+## 🚀 Features
+
+- **Mobile-First Design**: Optimized for mobile devices with responsive design
+- **Real Money Games**: Ludo, Snakes & Ladders, Trump Cards, and more
+- **Indian Market Focus**: Colors and design inspired by Indian culture
+- **Fast Performance**: Built with Astro for optimal loading speeds
+- **Modern UI**: Styled with UnoCSS for efficient styling
+- **SEO Optimized**: Proper meta tags, sitemap, and structured data
+
+## 🛠️ Tech Stack
+
+- **Framework**: [Astro](https://astro.build/)
+- **Styling**: [UnoCSS](https://unocss.dev/)
+- **Deployment**: [Cloudflare Pages](https://pages.cloudflare.com/)
+- **Language**: TypeScript/JavaScript
+
+## 🎮 Games Available
+
+1. **Ludo Supreme** - Classic Ludo with exciting twists
+2. **Snakes & Ladders Plus** - Enhanced board game experience
+3. **Trump Cards Mania** - Cricket-based card game
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd wpl-games
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open [http://localhost:4321](http://localhost:4321) in your browser
+
+## 📱 Mobile-First Approach
+
+This project follows a mobile-first design philosophy:
+
+- Responsive breakpoints: `sm` (640px), `md` (768px), `lg` (1024px), `xl` (1280px)
+- Touch-friendly interface elements
+- Optimized for various screen sizes
+- Fast loading on mobile networks
+
+## 🎨 Design System
+
+### Colors
+
+- **Primary**: Orange (#f97316) - Indian saffron
+- **Secondary**: Green (#22c55e) - Indian flag green  
+- **Accent**: Blue (#3b82f6) - Indian navy
+- **Gold**: (#f59e0b) - Premium highlights
+
+### Typography
+
+- **Display Font**: Poppins (headings)
+- **Body Font**: Inter (body text)
+
+## 🚀 Deployment
+
+### Cloudflare Pages
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. Deploy to Cloudflare Pages:
+```bash
+npm run deploy
+```
+
+### Manual Deployment
+
+1. Build the project:
+```bash
+npm run build
+```
+
+2. Upload the `dist` folder to your hosting provider
+
+## 📊 SEO Features
+
+- Semantic HTML structure
+- Open Graph meta tags
+- Twitter Card meta tags
+- Structured data markup
+- Sitemap.xml
+- Robots.txt
+- Optimized images and assets
+
+## 🔗 Important Links
+
+- **App Download**: https://app.vegas1.in/vegas0901.apk
+- **Affiliate Link**: https://www.vegas11.love/?uagt=vegas0904&path=signup
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+## 📞 Support
+
+For support and questions, please contact the development team.
+
+---
+
+**Note**: This platform is for users 18+ only. Please play responsibly.
 
 ```sh
 npm create astro@latest -- --template basics

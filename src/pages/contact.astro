@@ -1,0 +1,384 @@
+---
+const title = "Contact Us - WPL | Win Play Live";
+const description = "Get in touch with WPL customer support. We're here to help with any questions about our real money gaming platform.";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="keywords" content="contact WPL, customer support, real money games help, gaming support" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://wpl-games.pages.dev/contact" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/og-image.jpg" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://wpl-games.pages.dev/contact" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content="/og-image.jpg" />
+
+    <title>{title}</title>
+    
+    <style>
+      /* CSS Reset for body margin and prevent horizontal overflow */
+      * {
+        box-sizing: border-box;
+      }
+      
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-900 text-white font-sans">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+      <div class="container mx-auto px-3 xs:px-4 py-2 xs:py-3">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center space-x-2 xs:space-x-3">
+            <a href="/" class="flex items-center space-x-2 xs:space-x-3 hover:opacity-80 transition-opacity">
+              <img src="/logo.webp" alt="WPL Logo" class="w-8 h-8 xs:w-10 xs:h-10 object-contain" />
+              <span class="text-xl xs:text-2xl font-display font-bold text-gradient">WPL</span>
+            </a>
+          </div>
+          
+          <div class="hidden md:flex items-center space-x-8">
+            <a href="/" class="text-gray-300 hover:text-primary-400 transition-colors">Home</a>
+            <a href="/#games" class="text-gray-300 hover:text-primary-400 transition-colors">Games</a>
+            <a href="/#features" class="text-gray-300 hover:text-primary-400 transition-colors">Features</a>
+            <a href="/#download" class="text-gray-300 hover:text-primary-400 transition-colors">Download</a>
+            <a href="/contact" class="text-white hover:text-primary-400 transition-colors">Contact</a>
+          </div>
+
+          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+             class="btn-primary text-xs xs:text-sm md:text-base px-3 xs:px-4 py-2 xs:py-3"
+             target="_blank" rel="noopener noreferrer">
+            Play Now
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-20 xs:pt-24 pb-12 xs:pb-16 gradient-bg">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center max-w-3xl mx-auto">
+          <h1 class="text-3xl xs:text-4xl md:text-5xl lg:text-6xl font-display font-bold mb-4 xs:mb-6 text-shadow-lg animate-fade-in">
+            Contact <span class="text-gold-400">Us</span>
+          </h1>
+          <p class="text-base xs:text-lg md:text-xl text-gray-200 mb-8 animate-slide-up">
+            Have a question or need support? We're here to help! Reach out to our customer support team and we'll get back to you as soon as possible.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Form Section -->
+    <section class="py-12 xs:py-16 md:py-20 bg-gray-800">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+            
+            <!-- Contact Form -->
+            <div class="card bg-gray-900 border border-gray-700">
+              <h2 class="text-2xl xs:text-3xl font-display font-bold mb-6 text-gradient">
+                Send us a Message
+              </h2>
+              
+              <form class="space-y-6" action="#" method="POST">
+                <!-- Name -->
+                <div>
+                  <label for="name" class="block text-sm font-semibold text-gray-300 mb-2">
+                    Name *
+                  </label>
+                  <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    required
+                    class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200"
+                    placeholder="Enter your full name"
+                  />
+                </div>
+
+                <!-- Phone Number -->
+                <div>
+                  <label for="phone" class="block text-sm font-semibold text-gray-300 mb-2">
+                    Phone Number *
+                  </label>
+                  <input 
+                    type="tel" 
+                    id="phone" 
+                    name="phone" 
+                    required
+                    class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200"
+                    placeholder="Enter your phone number"
+                  />
+                </div>
+
+                <!-- Email -->
+                <div>
+                  <label for="email" class="block text-sm font-semibold text-gray-300 mb-2">
+                    Email *
+                  </label>
+                  <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    required
+                    class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200"
+                    placeholder="Enter your email address"
+                  />
+                </div>
+
+                <!-- Subject -->
+                <div>
+                  <label for="subject" class="block text-sm font-semibold text-gray-300 mb-2">
+                    Subject *
+                  </label>
+                  <select 
+                    id="subject" 
+                    name="subject" 
+                    required
+                    class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200"
+                  >
+                    <option value="" disabled selected>Select a subject</option>
+                    <option value="account">Account Issues</option>
+                    <option value="payment">Payment & Withdrawal</option>
+                    <option value="gameplay">Gameplay Questions</option>
+                    <option value="technical">Technical Support</option>
+                    <option value="feedback">Feedback & Suggestions</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+
+                <!-- Message -->
+                <div>
+                  <label for="message" class="block text-sm font-semibold text-gray-300 mb-2">
+                    Message *
+                  </label>
+                  <textarea 
+                    id="message" 
+                    name="message" 
+                    rows="5" 
+                    required
+                    class="w-full px-4 py-3 bg-gray-800 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-primary-500 focus:ring-2 focus:ring-primary-500/20 transition-all duration-200 resize-vertical"
+                    placeholder="Tell us how we can help you..."
+                  ></textarea>
+                </div>
+
+                <!-- Submit Button -->
+                <button 
+                  type="submit"
+                  class="btn-hero-primary glow-primary w-full text-base xs:text-lg relative group animate-float"
+                >
+                  <!-- Shimmer Effect -->
+                  <div class="absolute inset-0 shimmer-effect animate-shimmer opacity-0 group-hover:opacity-100 rounded-xl"></div>
+                  <span class="relative z-10 flex items-center justify-center">
+                    <span class="mr-2 text-lg xs:text-xl">📧</span>
+                    Send Message
+                  </span>
+                </button>
+              </form>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="space-y-8">
+              <!-- Contact Details -->
+              <div class="card bg-gray-900 border border-gray-700">
+                <h3 class="text-xl xs:text-2xl font-display font-bold mb-6 text-gradient">
+                  Get in Touch
+                </h3>
+                
+                <div class="space-y-6">
+                  <!-- Support Email -->
+                  <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div class="text-xl">📧</div>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-white mb-1">Email Support</h4>
+                      <p class="text-gray-400 text-sm">support@wpl-games.com</p>
+                      <p class="text-gray-500 text-xs">We typically respond within 24 hours</p>
+                    </div>
+                  </div>
+
+                  <!-- Phone Support -->
+                  <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-secondary-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div class="text-xl">📞</div>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-white mb-1">Phone Support</h4>
+                      <p class="text-gray-400 text-sm">+91 9876 543 210</p>
+                      <p class="text-gray-500 text-xs">Mon-Fri 9:00 AM - 6:00 PM IST</p>
+                    </div>
+                  </div>
+
+                  <!-- Live Chat -->
+                  <div class="flex items-start space-x-4">
+                    <div class="w-12 h-12 bg-accent-500 rounded-full flex items-center justify-center flex-shrink-0">
+                      <div class="text-xl">💬</div>
+                    </div>
+                    <div>
+                      <h4 class="font-semibold text-white mb-1">Live Chat</h4>
+                      <p class="text-gray-400 text-sm">Available 24/7</p>
+                      <p class="text-gray-500 text-xs">Click on the chat icon in the app</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- FAQ Quick Links -->
+              <div class="card bg-gray-900 border border-gray-700">
+                <h3 class="text-xl xs:text-2xl font-display font-bold mb-6 text-gradient">
+                  Quick Help
+                </h3>
+                
+                <div class="space-y-3">
+                  <a href="#" class="block p-3 bg-gray-800 rounded-lg hover:bg-gray-750 transition-colors group">
+                    <div class="flex items-center justify-between">
+                      <span class="text-sm text-gray-300 group-hover:text-white">How to withdraw money?</span>
+                      <span class="text-primary-400">→</span>
+                    </div>
+                  </a>
+                  
+                  <a href="#" class="block p-3 bg-gray-800 rounded-lg hover:bg-gray-750 transition-colors group">
+                    <div class="flex items-center justify-between">
+                      <span class="text-sm text-gray-300 group-hover:text-white">Account verification process</span>
+                      <span class="text-primary-400">→</span>
+                    </div>
+                  </a>
+                  
+                  <a href="#" class="block p-3 bg-gray-800 rounded-lg hover:bg-gray-750 transition-colors group">
+                    <div class="flex items-center justify-between">
+                      <span class="text-sm text-gray-300 group-hover:text-white">Game rules and regulations</span>
+                      <span class="text-primary-400">→</span>
+                    </div>
+                  </a>
+                  
+                  <a href="#" class="block p-3 bg-gray-800 rounded-lg hover:bg-gray-750 transition-colors group">
+                    <div class="flex items-center justify-between">
+                      <span class="text-sm text-gray-300 group-hover:text-white">Payment methods</span>
+                      <span class="text-primary-400">→</span>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 border-t border-gray-800 py-8 xs:py-12">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-6 xs:gap-8">
+          <div class="col-span-1 md:col-span-2">
+            <div class="flex items-center space-x-2 xs:space-x-3 mb-3 xs:mb-4">
+              <img src="/logo.webp" alt="WPL Logo" class="w-8 h-8 xs:w-10 xs:h-10 object-contain" />
+              <span class="text-xl xs:text-2xl font-display font-bold text-gradient">WPL</span>
+            </div>
+            <p class="text-sm xs:text-base text-gray-400 mb-3 xs:mb-4 max-w-md">
+              India's most trusted real money gaming platform. Play skill-based games and win real cash prizes safely and securely.
+            </p>
+            <div class="flex space-x-3 xs:space-x-4">
+              <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                <div class="text-lg xs:text-xl">📘</div>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                <div class="text-lg xs:text-xl">🐦</div>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                <div class="text-lg xs:text-xl">📷</div>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-primary-400 transition-colors">
+                <div class="text-lg xs:text-xl">📺</div>
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h3 class="text-base xs:text-lg font-bold mb-3 xs:mb-4">Quick Links</h3>
+            <ul class="space-y-1 xs:space-y-2">
+              <li><a href="/" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Home</a></li>
+              <li><a href="/#games" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Games</a></li>
+              <li><a href="/#features" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Features</a></li>
+              <li><a href="/#download" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Download</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 class="text-base xs:text-lg font-bold mb-3 xs:mb-4">Support</h3>
+            <ul class="space-y-1 xs:space-y-2">
+              <li><a href="/contact" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Contact Us</a></li>
+              <li><a href="#" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Help Center</a></li>
+              <li><a href="#" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Privacy Policy</a></li>
+              <li><a href="#" class="text-sm xs:text-base text-gray-400 hover:text-primary-400 transition-colors">Terms of Service</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="border-t border-gray-800 mt-6 xs:mt-8 pt-6 xs:pt-8 text-center">
+          <p class="text-xs xs:text-sm text-gray-400">
+            © 2024 WPL. All rights reserved. | 18+ Only | Play Responsibly
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Form Enhancement Script -->
+    <script>
+      // Form validation and enhancement
+      document.addEventListener('DOMContentLoaded', function() {
+        const form = document.querySelector('form');
+        
+        if (form) {
+          form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData);
+            
+            // Here you would normally send the data to your backend
+            console.log('Form submitted:', data);
+            
+            // Show success message (you can customize this)
+            alert('Thank you for your message! We will get back to you soon.');
+            
+            // Reset form
+            form.reset();
+          });
+        }
+
+        // Phone number formatting
+        const phoneInput = document.getElementById('phone');
+        if (phoneInput) {
+          phoneInput.addEventListener('input', function(e) {
+            const target = e.target;
+            if (target && target instanceof HTMLInputElement) {
+              let value = target.value.replace(/\D/g, '');
+              if (value.length > 10) {
+                value = value.slice(0, 10);
+              }
+              target.value = value;
+            }
+          });
+        }
+      });
+    </script>
+  </body>
+</html> 
