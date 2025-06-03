@@ -8,7 +8,7 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "deploy": "npm run build && wrangler pages publish dist",
+    "deploy": "npm run build && npx wrangler pages deploy dist --project-name wpl-games",
     "pages:dev": "wrangler pages dev dist"
   },
   "dependencies": {
