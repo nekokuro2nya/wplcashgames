@@ -124,7 +124,7 @@ export default defineConfig({
     },
   },
   shortcuts: {
-    'btn-primary': 'bg-primary-500 hover:bg-primary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200',
+    'btn-primary': 'bg-primary-500! hover:bg-primary-600! text-white! font-semibold py-3 px-6 rounded-lg transition-colors duration-200',
     'btn-secondary': 'bg-secondary-500 hover:bg-secondary-600 text-white font-semibold py-3 px-6 rounded-lg transition-colors duration-200',
     'btn-outline': 'border-2 border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white font-semibold py-3 px-6 rounded-lg transition-all duration-200',
     'btn-hero-primary': 'relative bg-gradient-to-r from-primary-500 to-primary-600 hover:from-primary-600 hover:to-primary-700 text-white font-bold py-3 xs:py-4 px-6 xs:px-8 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300 overflow-hidden',
@@ -150,5 +150,33 @@ export default defineConfig({
     ['*', { 'box-sizing': 'border-box' }],
     ['html', { 'margin': '0', 'padding': '0', 'overflow-x': 'hidden' }],
     ['body', { 'margin': '0', 'padding': '0', 'overflow-x': 'hidden' }],
+    // Remove underlines from all links and buttons
+    ['a', { 'text-decoration': 'none' }],
+    ['button', { 'text-decoration': 'none' }],
+    ['a:hover', { 'text-decoration': 'none' }],
+    ['button:hover', { 'text-decoration': 'none' }],
+    ['a:focus', { 'text-decoration': 'none' }],
+    ['button:focus', { 'text-decoration': 'none' }],
+    // Force btn-primary background color
+    ['.btn-primary', { 
+      'background-color': '#f97316 !important',
+      'color': '#ffffff !important'
+    }],
+    ['.btn-primary:hover', { 
+      'background-color': '#ea580c !important'
+    }],
+    // Remove default button styles
+    ['button', {
+      'background': 'none',
+      'border': 'none',
+      'outline': 'none',
+      'appearance': 'none',
+      'background-color': 'transparent'
+    }],
+    ['.mega-menu-trigger', {
+      'background-color': 'transparent !important',
+      'border': 'none !important',
+      'outline': 'none !important'
+    }],
   ],
 }) 
