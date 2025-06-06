@@ -83,6 +83,11 @@ const description = `${game.shortDescription} Download ${game.name} now and star
         overflow-x: hidden;
         width: 100%;
       }
+
+      /* Remove underline from all links */
+      a {
+        text-decoration: none;
+      }
       
       /* Tab styles */
       .tab-content {
@@ -166,12 +171,12 @@ const description = `${game.shortDescription} Download ${game.name} now and star
               </div>
             </div>
             
-            <button class="nav-button text-gray-300 hover:text-primary-400 transition-colors bg-transparent border-none outline-none cursor-pointer" onclick="window.location.href='/#payment'">Payment</button>
-            <button class="nav-button text-gray-300 hover:text-primary-400 transition-colors bg-transparent border-none outline-none cursor-pointer" onclick="window.location.href='/#testimonials'">Reviews</button>
-            <button class="nav-button text-gray-300 hover:text-primary-400 transition-colors bg-transparent border-none outline-none cursor-pointer" onclick="window.location.href='/contact'">Contact</button>
+            <button class="nav-button text-gray-300 hover:text-primary-400 transition-colors bg-transparent border-none outline-none cursor-pointer" data-target="#payment">Payment</button>
+            <button class="nav-button text-gray-300 hover:text-primary-400 transition-colors bg-transparent border-none outline-none cursor-pointer" data-target="#testimonials">Reviews</button>
+            <button class="nav-button text-gray-300 hover:text-primary-400 transition-colors bg-transparent border-none outline-none cursor-pointer" data-target="#download">Download</button>
           </div>
 
-          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+          <a href="https://www.dubai7.fun/" 
              class="btn-primary text-xs xs:text-sm md:text-base px-3 xs:px-4 py-2 xs:py-3"
              target="_blank" rel="noopener noreferrer">
             Play Now
@@ -182,40 +187,36 @@ const description = `${game.shortDescription} Download ${game.name} now and star
 
     <!-- Mobile Bottom Navigation -->
     <div class="fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50 md:hidden">
-      <div class="bg-gray-900/80 backdrop-blur-lg border border-gray-700/50 rounded-full px-4 py-2 shadow-2xl">
-        <div class="flex items-center space-x-6">
+      <div class="bg-gray-900/80 backdrop-blur-lg border border-gray-700/50 rounded-full px-4 py-2 shadow-2xl" style="width: 90vw;">
+        <div class="flex items-center justify-between">
           <!-- Games Button -->
-          <button class="mobile-games-btn flex flex-col items-center space-y-1 px-3 py-2 rounded-lg hover:bg-gray-800/50 transition-colors">
+          <button class="mobile-games-btn flex flex-col items-center bg-transparent border-none space-y-1 px-3 py-2 rounded-lg hover:bg-gray-800/50 transition-colors">
             <div class="w-6 h-6 flex items-center justify-center">
-              <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3"></path>
-              </svg>
+              <span class="text-lg">📲</span>
             </div>
-            <span class="text-xs text-gray-300">Games</span>
+            <span class="text-xs text-gray-300 whitespace-nowrap">Games</span>
           </button>
           
           <!-- Download Button -->
           <a href="https://app.vegas1.in/vegas0901.apk" 
-             class="flex flex-col items-center space-y-1 px-3 py-2 rounded-lg hover:bg-gray-800/50 transition-colors"
+             class="flex flex-col items-center space-y-1 px-3 py-2 rounded-lg hover:bg-gray-300/50 transition-colors"
              download>
             <div class="w-6 h-6 flex items-center justify-center">
               <svg class="w-5 h-5 text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
               </svg>
             </div>
-            <span class="text-xs text-gray-300">Download</span>
+            <span class="text-xs text-gray-300 whitespace-nowrap">Download</span>
           </a>
           
           <!-- Play Now Button -->
-          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+          <a href="https://www.dubai7.fun/" 
              class="flex flex-col items-center space-y-1 px-3 py-2 bg-primary-500 rounded-lg hover:bg-primary-600 transition-colors"
              target="_blank" rel="noopener noreferrer">
             <div class="w-6 h-6 flex items-center justify-center">
-              <svg class="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1.5a1.5 1.5 0 011.5 1.5v1a1.5 1.5 0 01-1.5 1.5H9m4.5-5H16a1 1 0 011 1v3a1 1 0 01-1 1h-2.5m-6 0V9.5a1.5 1.5 0 011.5-1.5H8"></path>
-              </svg>
+              <span class="text-lg">🎮</span>
             </div>
-            <span class="text-xs text-white font-medium">Play Now</span>
+            <span class="text-xs text-white font-medium whitespace-nowrap">Play Now</span>
           </a>
         </div>
       </div>
@@ -310,7 +311,7 @@ const description = `${game.shortDescription} Download ${game.name} now and star
             </div>
           </a>
           
-          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+          <a href="https://www.dubai7.fun/" 
              class="flex items-center p-3 bg-primary-500 rounded-lg hover:bg-primary-600 transition-colors"
              target="_blank" rel="noopener noreferrer">
             <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center mr-3">
@@ -372,7 +373,7 @@ const description = `${game.shortDescription} Download ${game.name} now and star
 
           <!-- Download Button -->
           <div class="flex flex-col xs:flex-row gap-4 justify-center items-center mb-8 xs:mb-12">
-            <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+            <a href="https://www.dubai7.fun/" 
                class="btn-hero-primary glow-primary text-base xs:text-lg w-full xs:w-auto relative group animate-float"
                target="_blank" rel="noopener noreferrer">
               <span class="relative z-10 flex items-center justify-center">
@@ -543,7 +544,7 @@ const description = `${game.shortDescription} Download ${game.name} now and star
               </div>
 
               <div class="text-center mt-8">
-                <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+                <a href="https://www.dubai7.fun/" 
                    class="btn-primary text-base px-6 py-3"
                    target="_blank" rel="noopener noreferrer">
                   Get Started Now
@@ -580,7 +581,7 @@ const description = `${game.shortDescription} Download ${game.name} now and star
 
         <div class="text-center mt-8 xs:mt-12">
           <p class="text-sm text-gray-400 mb-4">🎮 Experience the full game by playing now!</p>
-          <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+          <a href="https://www.dubai7.fun/" 
              class="btn-primary text-sm xs:text-base px-6 py-3"
              target="_blank" rel="noopener noreferrer">
             Play {game.name} Now
@@ -629,7 +630,7 @@ const description = `${game.shortDescription} Download ${game.name} now and star
           </p>
 
           <div class="flex flex-col xs:flex-row gap-4 justify-center items-center mb-6 xs:mb-8">
-            <a href="https://www.vegas11.love/?uagt=vegas0904&path=signup" 
+            <a href="https://www.dubai7.fun/" 
                class="btn-primary text-base xs:text-lg px-6 xs:px-8 py-3 xs:py-4 w-full xs:w-auto flex items-center justify-center"
                target="_blank" rel="noopener noreferrer">
               <div class="text-xl xs:text-2xl mr-2 xs:mr-3">🎮</div>
