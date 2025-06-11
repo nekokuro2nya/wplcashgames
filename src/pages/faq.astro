@@ -1,0 +1,176 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout title="FAQ - WPL Cash Games" description="Find answers to frequently asked questions about WPL Cash Games, including account management, payments, and game rules.">
+  <Navbar />
+  <main>
+    <!-- Hero Section -->
+    <section class="pt-24 pb-12 md:pt-32 md:pb-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gradient">
+            Frequently Asked Questions
+          </h1>
+          <p class="text-lg text-gray-300 mb-8">
+            Find answers to common questions about our platform
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-12 md:py-16">
+      <div class="container mx-auto px-4">
+        <div class="max-w-4xl mx-auto">
+          <div class="space-y-8">
+            <!-- Account & Registration -->
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 md:p-8">
+              <h2 class="text-2xl font-semibold text-white mb-6">Account & Registration</h2>
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-lg font-medium text-white mb-2">How do I create an account?</h3>
+                  <p class="text-gray-300">To create an account, click on the "Sign Up" button and follow these steps:</p>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 mt-2">
+                    <li>Enter your mobile number</li>
+                    <li>Verify your mobile number with OTP</li>
+                    <li>Create a password</li>
+                    <li>Complete your profile information</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-medium text-white mb-2">What documents do I need to verify my account?</h3>
+                  <p class="text-gray-300">You'll need to provide:</p>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 mt-2">
+                    <li>Valid government ID (Aadhaar Card, PAN Card, or Passport)</li>
+                    <li>Proof of address</li>
+                    <li>Selfie with ID for verification</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-medium text-white mb-2">How do I reset my password?</h3>
+                  <p class="text-gray-300">To reset your password:</p>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 mt-2">
+                    <li>Click on "Forgot Password" on the login page</li>
+                    <li>Enter your registered mobile number</li>
+                    <li>Verify with OTP</li>
+                    <li>Create a new password</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Payments & Withdrawals -->
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 md:p-8">
+              <h2 class="text-2xl font-semibold text-white mb-6">Payments & Withdrawals</h2>
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-lg font-medium text-white mb-2">What payment methods are accepted?</h3>
+                  <p class="text-gray-300">We accept various payment methods:</p>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 mt-2">
+                    <li>UPI (Google Pay, PhonePe, Paytm)</li>
+                    <li>Bank Transfer</li>
+                    <li>Credit/Debit Cards</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-medium text-white mb-2">How long do withdrawals take?</h3>
+                  <p class="text-gray-300">Withdrawals are typically processed within:</p>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 mt-2">
+                    <li>UPI: 5-10 minutes</li>
+                    <li>Bank Transfer: 1-2 business days</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-medium text-white mb-2">Is there a minimum withdrawal amount?</h3>
+                  <p class="text-gray-300">Yes, the minimum withdrawal amount is ₹100.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Games & Rules -->
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 md:p-8">
+              <h2 class="text-2xl font-semibold text-white mb-6">Games & Rules</h2>
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-lg font-medium text-white mb-2">What games are available?</h3>
+                  <p class="text-gray-300">We offer various skill-based games:</p>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 mt-2">
+                    <li>Rummy</li>
+                    <li>Poker</li>
+                    <li>Fantasy Sports</li>
+                    <li>And more...</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-medium text-white mb-2">How do I join a game?</h3>
+                  <p class="text-gray-300">To join a game:</p>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 mt-2">
+                    <li>Select your preferred game</li>
+                    <li>Choose a table with suitable entry fee</li>
+                    <li>Click "Join Table"</li>
+                    <li>Confirm your participation</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-medium text-white mb-2">What happens if I disconnect during a game?</h3>
+                  <p class="text-gray-300">If you disconnect:</p>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 mt-2">
+                    <li>You have 60 seconds to reconnect</li>
+                    <li>Auto-play will be activated if you don't reconnect</li>
+                    <li>Your game will continue automatically</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Technical Support -->
+            <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 md:p-8">
+              <h2 class="text-2xl font-semibold text-white mb-6">Technical Support</h2>
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-lg font-medium text-white mb-2">How can I contact customer support?</h3>
+                  <p class="text-gray-300">You can reach us through:</p>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 mt-2">
+                    <li>24/7 Live Chat</li>
+                    <li>Email: info@dubai7.top</li>
+                    <li>Telegram: @Dubai7_bet</li>
+                    <li>Phone: +91 9358382097</li>
+                  </ul>
+                </div>
+
+                <div>
+                  <h3 class="text-lg font-medium text-white mb-2">What should I do if I encounter technical issues?</h3>
+                  <p class="text-gray-300">If you face technical issues:</p>
+                  <ul class="list-disc list-inside text-gray-300 space-y-2 ml-4 mt-2">
+                    <li>Check your internet connection</li>
+                    <li>Clear your browser cache</li>
+                    <li>Update your browser to the latest version</li>
+                    <li>Contact our support team if the issue persists</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <Footer />
+</Layout>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style> 

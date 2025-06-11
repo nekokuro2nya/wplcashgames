@@ -1,55 +1,19 @@
 ---
+import Layout from '../layouts/Layout.astro';
 import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
 const title = "Contact Us - WPL | Win Play Live";
 const description = "Get in touch with WPL customer support. We're here to help with any questions about our real money gaming platform.";
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content={description} />
-    <meta name="keywords" content="contact WPL, customer support, real money games help, gaming support" />
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://wpl-games.pages.dev/contact" />
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:image" content="/og-image.jpg" />
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content="https://wpl-games.pages.dev/contact" />
-    <meta property="twitter:title" content={title} />
-    <meta property="twitter:description" content={description} />
-    <meta property="twitter:image" content="/og-image.jpg" />
-
-    <title>{title}</title>
-    
-    <style>
-      /* CSS Reset for body margin and prevent horizontal overflow */
-      * {
-        box-sizing: border-box;
-      }
-      
-      html, body {
-        margin: 0;
-        padding: 0;
-        overflow-x: hidden;
-        width: 100%;
-      }
-    </style>
-  </head>
-  <body class="bg-gray-900 text-white font-sans">
-    <Navbar />
-
+<Layout title="Contact Us - WPL Cash Games" description="Contact WPL Cash Games for any queries or support. We're here to help you with your gaming experience.">
+  <Navbar />
+  <main>
     <!-- Contact Hero Section -->
     <section class="pt-24 pb-12 md:pt-32 md:pb-16">
       <div class="container mx-auto px-4">
         <div class="max-w-4xl mx-auto text-center">
-          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
+          <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-gradient">
             Contact Us
           </h1>
           <p class="text-lg text-gray-300 mb-8">
@@ -118,57 +82,83 @@ const description = "Get in touch with WPL customer support. We're here to help 
       </div>
     </section>
 
-    <!-- Contact Info Section -->
+    <!-- Company Info Section -->
     <section class="py-12 md:py-16 bg-gray-800/30">
       <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-3 gap-8">
-          <!-- Email Support -->
-          <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 text-center">
-            <div class="w-12 h-12 bg-primary-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-primary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold mb-2">Email Support</h3>
-            <p class="text-gray-300 mb-4">Get in touch via email</p>
-            <a href="mailto:support@wpl-games.com" class="text-primary-400 hover:text-primary-300">
-              support@wpl-games.com
-            </a>
-          </div>
+        <div class="max-w-4xl mx-auto">
+          <div class="bg-gray-800 border border-gray-700 rounded-lg p-6 xs:p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <!-- Company Info -->
+              <div>
+                <h2 class="text-xl xs:text-2xl font-semibold text-white mb-6">Company Information</h2>
+                <div class="space-y-4">
+                  <div>
+                    <h3 class="text-sm font-medium text-gray-400 mb-1">Brand</h3>
+                    <p class="text-base text-white">WPL Cash Games</p>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-medium text-gray-400 mb-1">Company Name</h3>
+                    <p class="text-base text-white">Dubai7</p>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-medium text-gray-400 mb-1">Address</h3>
+                    <p class="text-base text-white">
+                      C/73 Changodar Citycenter,<br>
+                      NR. Changodar Bridge,<br>
+                      Changodar Sanand,<br>
+                      Ahmedabad- 382213,<br>
+                      Gujarat
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-          <!-- Live Chat -->
-          <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 text-center">
-            <div class="w-12 h-12 bg-secondary-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-secondary-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-              </svg>
+              <!-- Contact Info -->
+              <div>
+                <h2 class="text-xl xs:text-2xl font-semibold text-white mb-6">Contact Details</h2>
+                <div class="space-y-4">
+                  <div>
+                    <h3 class="text-sm font-medium text-gray-400 mb-1">Phone</h3>
+                    <a href="tel:+919358382097" class="text-base text-white hover:text-primary-400 transition-colors">
+                      +91 9358382097
+                    </a>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-medium text-gray-400 mb-1">Telegram</h3>
+                    <a href="https://t.me/Dubai7_bet" target="_blank" rel="noopener noreferrer" class="text-base text-white hover:text-primary-400 transition-colors flex items-center">
+                      <span class="mr-2">@Dubai7_bet</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                        <polyline points="15 3 21 3 21 9"></polyline>
+                        <line x1="10" y1="14" x2="21" y2="3"></line>
+                      </svg>
+                    </a>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-medium text-gray-400 mb-1">Support Hours</h3>
+                    <p class="text-base text-white">24/7 Customer Support</p>
+                  </div>
+                  <div>
+                    <h3 class="text-sm font-medium text-gray-400 mb-1">Email</h3>
+                    <a href="mailto:info@dubai7.top" class="text-base text-white hover:text-primary-400 transition-colors">
+                      info@dubai7.top
+                    </a>
+                  </div>
+                </div>
+              </div>
             </div>
-            <h3 class="text-lg font-semibold mb-2">Live Chat</h3>
-            <p class="text-gray-300 mb-4">24/7 customer support</p>
-            <button class="text-secondary-400 hover:text-secondary-300">
-              Start Chat
-            </button>
-          </div>
-
-          <!-- FAQ -->
-          <div class="bg-gray-800/50 backdrop-blur-sm p-6 rounded-xl border border-gray-700/50 text-center">
-            <div class="w-12 h-12 bg-accent-500/20 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-6 h-6 text-accent-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold mb-2">FAQ</h3>
-            <p class="text-gray-300 mb-4">Find quick answers</p>
-            <a href="/faq" class="text-accent-400 hover:text-accent-300">
-              View FAQ
-            </a>
           </div>
         </div>
       </div>
     </section>
+  </main>
+  <Footer />
+</Layout>
 
-    <script>
-      // Add any necessary JavaScript for form handling
-    </script>
-  </body>
-</html> 
+<style>
+  .text-gradient {
+    background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+</style> 

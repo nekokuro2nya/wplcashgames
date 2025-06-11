@@ -1,0 +1,108 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  buttonText?: string;
+  buttonLink?: string;
+  buttonIcon?: string;
+  isExternal?: boolean;
+}
+
+const {
+  title = "Ready to Start Winning?",
+  description = "Download WPL now and join millions of players winning real money!",
+  buttonText = "Download App",
+  buttonLink = "https://app.vegas1.in/vegas0901.apk",
+  buttonIcon = "",
+  isExternal = false
+} = Astro.props;
+---
+
+<section class="py-12 xs:py-16 md:py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+  <div class="container mx-auto px-3 xs:px-4">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+        {title}
+      </h2>
+      <p class="text-base xs:text-lg text-gray-300 mb-8 xs:mb-12 max-w-2xl mx-auto">
+        {description}
+      </p>
+      
+      <a 
+        href={buttonLink}
+        class="btn-hero-primary glow-primary text-base xs:text-lg relative group animate-float animate-pulse-glow inline-block"
+        download={!isExternal}
+        target={isExternal ? "_blank" : undefined}
+        rel={isExternal ? "noopener noreferrer" : undefined}
+      >
+        <!-- Shimmer Effect -->
+        <div class="absolute inset-0 shimmer-effect animate-shimmer opacity-0 group-hover:opacity-100 rounded-xl"></div>
+        <!-- Pulse Ring -->
+        <div class="absolute inset-0 rounded-xl bg-primary-500 opacity-20 animate-ping"></div>
+        <span class="relative z-10 flex items-center justify-center">
+          <span class="mr-2 text-lg xs:text-xl animate-bounce">{buttonIcon}</span>
+          {buttonText}
+        </span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .btn-hero-primary {
+    @apply px-6 xs:px-8 py-3 xs:py-4 bg-primary-500 text-white rounded-xl font-semibold transition-all duration-300 hover:bg-primary-600 hover:shadow-lg hover:shadow-primary-500/20;
+  }
+
+  .glow-primary {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+
+  .shimmer-effect {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.2),
+      transparent
+    );
+    background-size: 200% 100%;
+  }
+
+  .animate-shimmer {
+    animation: shimmer 2s infinite;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-5px);
+    }
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgba(59, 130, 246, 0.5);
+    }
+  }
+</style> 

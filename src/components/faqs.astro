@@ -1,0 +1,130 @@
+<section id="faq" class="py-20">
+    <div class="container mx-auto px-3 xs:px-4">
+      <div class="text-center mb-12 xs:mb-16">
+        <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto px-2 xs:px-0">
+          Get answers to the most common questions about WPL gaming platform
+        </p>
+      </div>
+
+      <div class="max-w-3xl mx-auto space-y-4">
+        <!-- FAQ 1 -->
+        <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+          <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+            <span class="text-base xs:text-lg font-semibold">Is WPL legal and safe to play in India?</span>
+            <span class="faq-icon text-primary-400 text-xl">+</span>
+          </button>
+          <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+            <p class="text-sm xs:text-base text-gray-300">Yes, WPL is completely legal in India as we offer skill-based games. Our platform is secured with bank-level encryption and follows all Indian gaming regulations. We are registered and licensed to operate in India.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+          <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+            <span class="text-base xs:text-lg font-semibold">How can I withdraw my winnings?</span>
+            <span class="faq-icon text-primary-400 text-xl">+</span>
+          </button>
+          <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+            <p class="text-sm xs:text-base text-gray-300">You can withdraw your winnings instantly to your bank account via UPI, Paytm, PhonePe, Google Pay, or direct bank transfer. Minimum withdrawal amount is ₹50 and there are no hidden charges.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+          <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+            <span class="text-base xs:text-lg font-semibold">What is the minimum deposit amount?</span>
+            <span class="faq-icon text-primary-400 text-xl">+</span>
+          </button>
+          <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+            <p class="text-sm xs:text-base text-gray-300">The minimum deposit amount is just ₹10. You can deposit money using UPI, digital wallets, net banking, or debit/credit cards. All transactions are processed instantly and securely.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+          <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+            <span class="text-base xs:text-lg font-semibold">Are the games fair and not rigged?</span>
+            <span class="faq-icon text-primary-400 text-xl">+</span>
+          </button>
+          <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+            <p class="text-sm xs:text-base text-gray-300">Absolutely! All our games use certified Random Number Generator (RNG) technology to ensure fair play. We are audited by third-party agencies and maintain complete transparency in our gaming algorithms.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 5 -->
+        <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+          <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+            <span class="text-base xs:text-lg font-semibold">Can I play with my friends?</span>
+            <span class="faq-icon text-primary-400 text-xl">+</span>
+          </button>
+          <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+            <p class="text-sm xs:text-base text-gray-300">Yes! You can create private rooms and invite your friends to play together. You can also refer friends and earn bonus cash for every successful referral when they make their first deposit.</p>
+          </div>
+        </div>
+
+        <!-- FAQ 6 -->
+        <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+          <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+            <span class="text-base xs:text-lg font-semibold">What if I face any technical issues?</span>
+            <span class="faq-icon text-primary-400 text-xl">+</span>
+          </button>
+          <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+            <p class="text-sm xs:text-base text-gray-300">Our 24/7 customer support team is always ready to help you. You can reach us through live chat, email, or phone call. We also have a comprehensive help center with detailed guides and troubleshooting tips.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-8 xs:mt-12">
+        <p class="text-sm text-gray-400 mb-4">Still have questions?</p>
+        <a href="/contact" class="btn-primary text-sm xs:text-base px-6 py-3">Contact Support</a>
+      </div>
+    </div>
+  </section>
+
+<script>
+  // 等待 DOM 加載完成
+  document.addEventListener('DOMContentLoaded', () => {
+    // 獲取所有 FAQ 問題按鈕
+    const faqButtons = document.querySelectorAll('.faq-question');
+    
+    // 為每個按鈕添加點擊事件
+    faqButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // 獲取當前 FAQ 項目的答案部分
+        const answer = button.nextElementSibling as HTMLElement;
+        const icon = button.querySelector('.faq-icon') as HTMLElement;
+        
+        // 確保元素存在
+        if (answer && icon) {
+          // 切換答案的顯示狀態
+          answer.classList.toggle('hidden');
+          
+          // 切換圖標
+          if (answer.classList.contains('hidden')) {
+            icon.textContent = '+';
+          } else {
+            icon.textContent = '−';
+          }
+        }
+      });
+    });
+  });
+</script>
+
+<style>
+  /* 添加過渡效果 */
+  .faq-answer {
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .faq-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .faq-question:hover .faq-icon {
+    transform: scale(1.1);
+  }
+</style>

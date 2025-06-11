@@ -1,70 +1,70 @@
 {
-  "9-wickets": {
-    "name": "9 Wickets",
-    "slug": "9-wickets",
-    "icon": "/images/games/app01-9Wickets.webp",
-    "heroImage": "/images/games/app01-9Wickets.webp",
-    "category": "Cricket Game",
-    "rating": 4.7,
-    "downloads": "2M+",
-    "size": "45MB",
-    "version": "2.1.5",
-    "developer": "WPL Games",
-    "shortDescription": "Experience the thrill of cricket with real money rewards in this action-packed game.",
-    "description": "9 Wickets is an exciting cricket-based real money game that combines skill, strategy, and the love of cricket. Play against real opponents, showcase your cricket knowledge, and win exciting cash prizes. With realistic gameplay mechanics and fair play guaranteed, this is the ultimate cricket gaming experience for Indian players.",
+  "rummy": {
+    "name": "Rummy",
+    "slug": "rummy",
+    "icon": "/images/games/app10-Rummy.webp",
+    "heroImage": "/images/games/app10-Rummy.webp",
+    "category": "Card Game",
+    "rating": 4.9,
+    "downloads": "4M+",
+    "size": "40MB",
+    "version": "2.3.1",
+    "developer": "Dubai7",
+    "shortDescription": "Master the art of Rummy with real players and win exciting cash prizes.",
+    "description": "Rummy is India's most popular skill-based card game, now available with real money gameplay. Test your strategic thinking, card management skills, and quick decision-making abilities against players from across the country. With multiple game variants, tournaments, and daily rewards, this is the ultimate Rummy experience for both beginners and professionals.",
     "features": [
-      "Real-time multiplayer cricket matches",
-      "Multiple game modes and tournaments",
-      "Skill-based gameplay with fair rewards",
-      "Instant withdrawals to your bank account",
-      "24/7 customer support",
-      "Secure and encrypted transactions"
+      "Multiple Rummy variants (Points, Pool, Deals)",
+      "Daily tournaments with big prize pools",
+      "Skill-based matchmaking system",
+      "Practice tables for beginners",
+      "Instant withdrawals via UPI/Bank",
+      "24/7 customer support"
     ],
     "screenshots": [
-      "/images/games/screenshots/9-wickets-1.webp",
-      "/images/games/screenshots/9-wickets-2.webp",
-      "/images/games/screenshots/9-wickets-3.webp",
-      "/images/games/screenshots/9-wickets-4.webp"
+      "/images/games/screenshots/rummy-1.webp",
+      "/images/games/screenshots/rummy-2.webp",
+      "/images/games/screenshots/rummy-3.webp",
+      "/images/games/screenshots/rummy-4.webp"
     ],
     "reviews": [
       {
-        "name": "Rohit Sharma",
+        "name": "Amit Patel",
         "rating": 5,
-        "comment": "Amazing cricket game! Won ₹5000 in my first week. Highly recommended!",
+        "comment": "Best Rummy platform I've played on. Fair play and quick payouts!",
         "date": "2024-05-15",
         "verified": true
       },
       {
-        "name": "Priya Patel",
-        "rating": 4,
-        "comment": "Great graphics and smooth gameplay. Love the tournament mode!",
-        "date": "2024-05-10",
+        "name": "Neha Sharma",
+        "rating": 5,
+        "comment": "Love the tournaments and daily rewards. Won ₹10,000 last week!",
+        "date": "2024-05-12",
         "verified": true
       },
       {
-        "name": "Vikram Singh",
-        "rating": 5,
-        "comment": "Best cricket game for real money. Fair play and quick withdrawals.",
-        "date": "2024-05-08",
+        "name": "Rahul Verma",
+        "rating": 4,
+        "comment": "Great interface and smooth gameplay. Perfect for both casual and serious players.",
+        "date": "2024-05-10",
         "verified": true
       }
     ],
     "faqs": [
       {
-        "question": "Is 9 Wickets legal to play in India?",
-        "answer": "Yes, 9 Wickets is completely legal in India as it's a skill-based game. We comply with all Indian gaming regulations and laws."
+        "question": "Is Rummy legal in India?",
+        "answer": "Yes, Rummy is completely legal in India as it's recognized as a game of skill by the Supreme Court. We operate in full compliance with Indian gaming laws."
+      },
+      {
+        "question": "What are the different Rummy variants available?",
+        "answer": "We offer Points Rummy, Pool Rummy, and Deals Rummy. Each variant has its own unique rules and strategies."
       },
       {
         "question": "How do I withdraw my winnings?",
-        "answer": "You can instantly withdraw your winnings to your bank account via UPI, Paytm, or direct bank transfer. Minimum withdrawal is ₹50."
+        "answer": "You can withdraw your winnings instantly through UPI, Paytm, or direct bank transfer. Minimum withdrawal amount is ₹100."
       },
       {
-        "question": "What is the minimum entry fee?",
-        "answer": "Entry fees start from as low as ₹5 for practice matches and go up to ₹500+ for premium tournaments."
-      },
-      {
-        "question": "Is the game fair and not rigged?",
-        "answer": "Absolutely! We use certified RNG technology and all matches are monitored for fair play. We maintain complete transparency in our gaming algorithms."
+        "question": "Are there any practice tables for beginners?",
+        "answer": "Yes, we offer free practice tables where you can learn the game without risking real money. Perfect for beginners!"
       }
     ]
   },
@@ -203,6 +203,75 @@
       {
         "question": "Is there any skill involved in Andar Bahar?",
         "answer": "While primarily a game of chance, experienced players often use betting strategies and card counting techniques to improve their odds."
+      }
+    ]
+  },
+  "9-wickets": {
+    "name": "9 Wickets",
+    "slug": "9-wickets",
+    "icon": "/images/games/app01-9Wickets.webp",
+    "heroImage": "/images/games/app01-9Wickets.webp",
+    "category": "Cricket Game",
+    "rating": 4.7,
+    "downloads": "2M+",
+    "size": "45MB",
+    "version": "2.1.5",
+    "developer": "WPL Games",
+    "shortDescription": "Experience the thrill of cricket with real money rewards in this action-packed game.",
+    "description": "9 Wickets is an exciting cricket-based real money game that combines skill, strategy, and the love of cricket. Play against real opponents, showcase your cricket knowledge, and win exciting cash prizes. With realistic gameplay mechanics and fair play guaranteed, this is the ultimate cricket gaming experience for Indian players.",
+    "features": [
+      "Real-time multiplayer cricket matches",
+      "Multiple game modes and tournaments",
+      "Skill-based gameplay with fair rewards",
+      "Instant withdrawals to your bank account",
+      "24/7 customer support",
+      "Secure and encrypted transactions"
+    ],
+    "screenshots": [
+      "/images/games/screenshots/9-wickets-1.webp",
+      "/images/games/screenshots/9-wickets-2.webp",
+      "/images/games/screenshots/9-wickets-3.webp",
+      "/images/games/screenshots/9-wickets-4.webp"
+    ],
+    "reviews": [
+      {
+        "name": "Rohit Sharma",
+        "rating": 5,
+        "comment": "Amazing cricket game! Won ₹5000 in my first week. Highly recommended!",
+        "date": "2024-05-15",
+        "verified": true
+      },
+      {
+        "name": "Priya Patel",
+        "rating": 4,
+        "comment": "Great graphics and smooth gameplay. Love the tournament mode!",
+        "date": "2024-05-10",
+        "verified": true
+      },
+      {
+        "name": "Vikram Singh",
+        "rating": 5,
+        "comment": "Best cricket game for real money. Fair play and quick withdrawals.",
+        "date": "2024-05-08",
+        "verified": true
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Is 9 Wickets legal to play in India?",
+        "answer": "Yes, 9 Wickets is completely legal in India as it's a skill-based game. We comply with all Indian gaming regulations and laws."
+      },
+      {
+        "question": "How do I withdraw my winnings?",
+        "answer": "You can instantly withdraw your winnings to your bank account via UPI, Paytm, or direct bank transfer. Minimum withdrawal is ₹50."
+      },
+      {
+        "question": "What is the minimum entry fee?",
+        "answer": "Entry fees start from as low as ₹5 for practice matches and go up to ₹500+ for premium tournaments."
+      },
+      {
+        "question": "Is the game fair and not rigged?",
+        "answer": "Absolutely! We use certified RNG technology and all matches are monitored for fair play. We maintain complete transparency in our gaming algorithms."
       }
     ]
   }
