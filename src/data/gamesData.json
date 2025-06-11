@@ -1,0 +1,240 @@
+{
+  "cardGames": [
+    {
+      "id": "rummy",
+      "name": "Indian Rummy",
+      "icon": "/images/games/icon/Card-01.webp",
+      "description": "Popular card game for 2-6 players, enjoyed by families too. Form valid sets or sequences to win. Play free and real cash games like Pool, Deals, and Points Rummy to earn money now!",
+      "category": "Card Game"
+    },
+    {
+      "id": "poker",
+      "name": "Texas Hold'em Poker",
+      "icon": "/images/games/icon/Card-02.webp",
+      "description": "Strategic card game where you make the best hand to win. Play real money poker games like Texas Hold'em, Omaha, and Poker Puzzle. Choose tables that fit your budget and win up to ₹1.5 crore GTD! Play and enjoy responsibly.",
+      "category": "Card Game"
+    },
+    {
+      "id": "call-break",
+      "name": "Call Break",
+      "icon": "/images/games/icon/Card-03.webp",
+      "description": "Also known as Lakadi or Ghochi, this card game challenges players to bid and win rounds by playing higher cards than those on the table. Play variants like Classic, Rapid, Multi-Winner, and Trump Callbreak for real money!",
+      "category": "Card Game"
+    },
+    {
+      "id": "win-patti",
+      "name": "Win Patti",
+      "icon": "/images/games/icon/Card-04.webp",
+      "description": "Skill-based card game played with three cards. Make smart choices about when to bet, fold, or bluff - don't just rely on luck. Play Win Patti and other cash-winning card games to earn real money online!",
+      "category": "Card Game"
+    },
+    {
+      "id": "gin-rummy",
+      "name": "Gin Rummy",
+      "icon": "/images/games/icon/Card-05.webp",
+      "description": "Fast, two-player card game where you form sets by matching cards in sequences or ranks. Unlike regular Rummy, players aim to 'knock' when their hand is ready. Plan your moves and earn cash rewards with your skills!",
+      "category": "Card Game"
+    },
+    {
+      "id": "trump-call-break",
+      "name": "Trump Call Break",
+      "icon": "/images/games/icon/Card-06.webp",
+      "description": "Fun twist on Call Break where players pick a trump suit that can beat other cards. More tricky and exciting than regular Call Break. Use your skills to earn real cash rewards!",
+      "category": "Card Game"
+    },
+    {
+      "id": "badam-satti",
+      "name": "Badam Satti",
+      "icon": "/images/games/icon/Card-07.webp",
+      "description": "Played with a 52-card deck, starting with the 7 of Hearts. Place cards in sequence from the 7, building up or down by suit. Use strategy to finish first, block others, and earn rewards with each win!",
+      "category": "Card Game"
+    },
+    {
+      "id": "spades",
+      "name": "Spades",
+      "icon": "/images/games/icon/Card-08.webp",
+      "description": "Card game where Spade cards beat all others. Play solo or in teams of 2, 3, 4, or 6. Bid the number of tricks you can win and match it to score. Outsmart your opponents with clever moves!",
+      "category": "Card Game"
+    },
+    {
+      "id": "cube-solitaire",
+      "name": "Cube Solitaire",
+      "icon": "/images/games/icon/Card-09.webp",
+      "description": "Faster, timed version of classic Solitaire. Stack cards in alternate colors from King to Ace and clear the board before time runs out. The quicker you finish, the higher you score. Earn with every win!",
+      "category": "Card Game"
+    },
+    {
+      "id": "andar-bahar",
+      "name": "Andar Bahar",
+      "icon": "/images/games/icon/Card-10.webp",
+      "description": "Fun Indian card game where a Joker card is placed in the middle. Guess whether the next card will match it on the Andar or Bahar side. Cards are dealt until a match is found. Play now and enjoy the excitement!",
+      "category": "Card Game"
+    },
+    {
+      "id": "draw-4",
+      "name": "Draw 4",
+      "icon": "/images/games/icon/Card-11.webp",
+      "description": "Fast-paced card game where players match cards by color or number. Get rid of all your cards or have the lowest score when time runs out. Be quick, play smart, and earn cash rewards while racing to finish first!",
+      "category": "Card Game"
+    }
+  ],
+  "casualGames": [
+    {
+      "id": "ludo",
+      "name": "Ludo Master",
+      "icon": "/images/games/icon/Casual-01.webp",
+      "description": "Classic board game for 2-4 players. Win by moving all your pawns to the finish. Multiple game modes: Ludo Win, Ludo Dice, and Ludo 2 Dice. Win rewards easily!",
+      "category": "Board Game"
+    },
+    {
+      "id": "snl",
+      "name": "Snakes & Ladders",
+      "icon": "/images/games/icon/Casual-02.webp",
+      "description": "Exciting multiplayer game where you roll dice to move. Climb ladders to advance faster, but watch out for snakes that send you back! A classic game testing luck and strategy.",
+      "category": "Board Game"
+    },
+    {
+      "id": "carrom",
+      "name": "Carrom Pro",
+      "icon": "/images/games/icon/Casual-03.webp",
+      "description": "Classic two-player board game where you score by skillfully sliding discs into pockets. Show your precise control and defeat opponents to win rewards!",
+      "category": "Board Game"
+    },
+    {
+      "id": "opinio",
+      "name": "Opinio",
+      "description": "Fun prediction game testing your judgment skills. Make accurate predictions and showcase your expertise. Special cricket-themed games to win rewards!",
+      "icon": "/images/games/icon/Casual-04.webp",
+      "category": "Prediction Game"
+    },
+    {
+      "id": "crash-skill",
+      "name": "Crash Skill",
+      "icon": "/images/games/icon/Casual-05.webp",
+      "description": "Strategic crash game where you predict when the rocket will fall. Cash out before the crash to multiply your winnings. Test your judgment and timing!",
+      "category": "Crash Game"
+    },
+    {
+      "id": "cricket-100x",
+      "name": "Cricket 100x",
+      "icon": "/images/games/icon/Casual-06.webp",
+      "description": "Innovative game combining cricket with quick quizzes. Choose targets on 3x3, 4x4, or 5x5 grids, avoid getting out, and win more rewards!",
+      "category": "Sports Game"
+    },
+    {
+      "id": "snl-numbers",
+      "name": "SNL Numbers",
+      "icon": "/images/games/icon/Casual-07.webp",
+      "description": "Digital version of the classic game. Match flashing numbers to move, climb ladders for points, avoid snakes, and send opponents back to start!",
+      "category": "Board Game"
+    },
+    {
+      "id": "bubble-shooter",
+      "name": "Bubble Shooter",
+      "icon": "/images/games/icon/Casual-08.webp",
+      "description": "Classic shooting game where you match three or more bubbles of the same color. Prevent bubbles from reaching the bottom, score higher by popping more, and win generous rewards!",
+      "category": "Arcade Game"
+    },
+    {
+      "id": "bingo-skill",
+      "name": "Bingo Skill",
+      "icon": "/images/games/icon/Casual-09.webp",
+      "description": "Fun number game where you mark called numbers on a 5x5 grid. Win by completing a row, column, or diagonal. Quick and exciting gameplay!",
+      "category": "Number Game"
+    }
+  ],
+  "fantasyGames": [
+    {
+      "id": "fantasy-cricket",
+      "name": "Fantasy Cricket",
+      "icon": "/images/games/icon/Fantasy-01.webp",
+      "description": "Create your dream team of 11 players from real matches. Strategically select your captain and vice-captain, then watch your team earn points based on their real-world performance. Join now to turn your cricket knowledge into real rewards!",
+      "category": "Fantasy Game"
+    },
+    {
+      "id": "fantasy-football",
+      "name": "Fantasy Football",
+      "icon": "/images/games/icon/Fantasy-02.webp",
+      "description": "Build your ultimate football team using real player data. Make strategic trades, create the perfect lineup, and earn points based on actual match performances. Show your football expertise and win big!",
+      "category": "Fantasy Game"
+    }
+  ],
+  "sportsGames": [
+    {
+      "id": "8ball-pool",
+      "name": "8 Ball Pool",
+      "icon": "/images/games/icon/Sports-01.webp",
+      "description": "Classic pool game with 16 balls - one cue ball and 15 object balls. Pocket your assigned balls and the 8-ball to win. Play singles or doubles, showcase your precision, and earn cash rewards!",
+      "category": "Sports Game"
+    },
+    {
+      "id": "archery",
+      "name": "Archery Master",
+      "icon": "/images/games/icon/Sports-02.webp",
+      "description": "Test your precision in this challenging archery game. Hit the center for maximum points while accounting for wind effects. Compete online, aim for the highest score, and win real cash rewards!",
+      "category": "Sports Game"
+    }
+  ],
+  "puzzleGames": [
+    {
+      "id": "block-puzzle",
+      "name": "Block Puzzle",
+      "icon": "/images/games/icon/Puzzle-01.webp",
+      "description": "Strategic puzzle game on a 9x9 grid. Place different shaped blocks to clear rows and columns. Race against time, compete with real players, and turn your puzzle-solving skills into rewards!",
+      "category": "Puzzle Game"
+    },
+    {
+      "id": "21-puzzle",
+      "name": "21 Puzzle",
+      "icon": "/images/games/icon/Puzzle-02.webp",
+      "description": "Classic card game where you place cards on a 5-column board. Keep the total value at 21 or less. Use your strategic thinking to make smart moves and win big cash rewards!",
+      "category": "Puzzle Game"
+    }
+  ],
+  "racingGames": [
+    {
+      "id": "bike-racing",
+      "name": "Bike Racing",
+      "icon": "/images/games/icon/Racing-01.webp",
+      "description": "Thrilling multiplayer racing game. Navigate through challenging tracks, dodge traffic, and use the map to track your progress. Balance speed and control to cross the finish line first and win cash rewards!",
+      "category": "Racing Game"
+    },
+    {
+      "id": "monster-truck",
+      "name": "Monster Truck",
+      "icon": "/images/games/icon/Racing-02.webp",
+      "description": "Extreme racing game featuring powerful monster trucks. Perform spectacular stunts, conquer rugged terrain, and land smoothly to maintain speed. Compete online and win real cash by mastering the challenging tracks!",
+      "category": "Racing Game"
+    },
+    {
+      "id": "runner-no1",
+      "name": "Runner No.1",
+      "icon": "/images/games/icon/Racing-03.webp",
+      "description": "Exciting 3D endless runner game. Control an explorer being chased by a bear across various terrains. Avoid obstacles, collect gold coins for bonus points, and run as far as possible to achieve the highest score!",
+      "category": "Racing Game"
+    }
+  ],
+  "otherGames": [
+    {
+      "id": "fruit-chop",
+      "name": "Fruit Chop",
+      "icon": "/images/games/icon/Other-01.webp",
+      "description": "Fast-paced fruit slicing game that tests your reflexes. Slice as many fruits as possible while avoiding bombs. Show off your quick hands and precision to earn cash rewards!",
+      "category": "Arcade Game"
+    },
+    {
+      "id": "fruit-dart",
+      "name": "Fruit Dart",
+      "icon": "/images/games/icon/Other-02.webp",
+      "description": "Exciting dart-throwing game where you aim for fruits on screen. Tap to throw darts with perfect timing and accuracy. Hit the right targets to score points and win real cash prizes!",
+      "category": "Arcade Game"
+    },
+    {
+      "id": "speed-chess",
+      "name": "Speed Chess",
+      "icon": "/images/games/icon/Other-03.webp",
+      "description": "Classic strategy game with fast-paced gameplay. Multiple difficulty levels cater to both beginners and experts. Challenge your mind, make quick decisions, and win cash rewards!",
+      "category": "Strategy Game"
+    }
+  ]
+} 
