@@ -1,0 +1,62 @@
+---
+import gamesData from '../data/gamesData.json';
+
+interface Game {
+  id: string;
+  name: string;
+  icon: string;
+  description: string;
+  category: string;
+}
+
+interface Props {
+  type: 'cardGames' | 'casualGames';
+  title: string;
+  description?: string;
+}
+
+const { type, title, description } = Astro.props;
+const games = gamesData[type] as Game[];
+---
+
+<section class="py-12 xs:py-16 md:py-20 bg-gray-800">
+  <div class="container mx-auto px-3 xs:px-4">
+    <div class="text-center mb-12 xs:mb-16">
+      <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+        {title}
+      </h2>
+      {description && (
+        <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto px-2 xs:px-0">
+          {description}
+        </p>
+      )}
+    </div>
+
+    <div class="space-y-4">
+      {games.map((game) => (
+        <div class="flex gap-4 p-4 bg-gray-900 border border-gray-700 rounded-lg hover:border-primary-500 hover:bg-gray-800 transition-all duration-300">
+          <div class="w-24 h-24 flex-shrink-0">
+            <img
+              src={game.icon}
+              alt={game.name}
+              class="w-full h-full object-contain"
+            />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-lg font-semibold text-white mb-2">{game.name}</h3>
+            <p class="text-sm text-gray-400">{game.description}</p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .text-gradient {
+    background: linear-gradient(135deg, #f97316 0%, #22c55e 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+</style> 

@@ -7,6 +7,7 @@ import Footer from '../components/footer.astro';
 import Payment from '../components/payment.astro';
 import Reviews from '../components/reviews.astro';
 import games from '../data/games.json';
+import GameList from '../components/gameList.astro';
 
 const title = "WPL - Win Play Live | Premium Real Money Gaming Experience";
 const description = "WPL Cash Games - India's trusted real money gaming platform. Play Rummy, Aviator, Andar Bahar and win big with secure payments and instant withdrawals. Join millions of players today!";
@@ -77,6 +78,62 @@ const description = "WPL Cash Games - India's trusted real money gaming platform
 
     <!-- Reviews Section -->
     <Reviews />
+
+    <!-- Rated by Real Cash Gamers Section -->
+    <section class="py-12 xs:py-16 md:py-20 bg-gradient-to-br from-gray-900 to-gray-800">
+      <div class="container mx-auto px-3 xs:px-4">
+        <div class="text-center mb-12 xs:mb-16">
+          <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
+            Rated by Real Cash Gamers Online
+          </h2>
+          <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto px-2 xs:px-0">
+            Join thousands of satisfied players who trust WPL for their real money gaming experience
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 xs:gap-8">
+          <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-primary-500/50 transition-all duration-300">
+            <div class="flex items-center justify-center mb-4">
+              <div class="text-4xl">⭐</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-gold-400 mb-2">4.8/5</div>
+              <p class="text-gray-300">Average Rating</p>
+            </div>
+            </div>
+
+          <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-secondary-500/50 transition-all duration-300">
+            <div class="flex items-center justify-center mb-4">
+              <div class="text-4xl">👥</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-secondary-400 mb-2">1M+</div>
+              <p class="text-gray-300">Active Players</p>
+            </div>
+            </div>
+
+          <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-accent-500/50 transition-all duration-300">
+            <div class="flex items-center justify-center mb-4">
+              <div class="text-4xl">💰</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-accent-400 mb-2">₹50Cr+</div>
+              <p class="text-gray-300">Total Winnings</p>
+            </div>
+            </div>
+
+          <div class="bg-gray-800/50 backdrop-blur-sm rounded-xl p-6 border border-gray-700/50 hover:border-primary-500/50 transition-all duration-300">
+            <div class="flex items-center justify-center mb-4">
+              <div class="text-4xl">🎮</div>
+            </div>
+            <div class="text-center">
+              <div class="text-3xl font-bold text-primary-400 mb-2">10+</div>
+              <p class="text-gray-300">Popular Games</p>
+            </div>
+            </div>
+        </div>
+      </div>
+    </section>
 
     <!-- Features Section -->
   <section id="features" class="py-12 xs:py-16 md:py-20">
@@ -172,6 +229,49 @@ const description = "WPL Cash Games - India's trusted real money gaming platform
         </div>
       </div>
     </section>
+
+    <GameList 
+  type="cardGames" 
+  title="Card Games" 
+  description="Choose from our exciting collection of card games and start winning real money today!"
+/>
+
+<GameList 
+  type="casualGames" 
+  title="Casual Games" 
+  description="Quick and exciting casual games with instant wins!"
+/>
+
+<GameList 
+  type="fantasyGames" 
+  title="Fantasy Games" 
+  description="Play your favorite fantasy games and win real money rewards!"
+/>
+
+<GameList 
+  type="sportsGames" 
+  title="Sports Games" 
+  description="Play your favorite sports games and win real money rewards!"
+/>
+
+<GameList 
+  type="puzzleGames" 
+  title="Puzzle Games" 
+  description="Play your favorite puzzle games and win real money rewards!"
+/>
+
+<GameList 
+  type="racingGames" 
+  title="Racing Games" 
+  description="Play your favorite racing games and win real money rewards!"
+/>
+
+<GameList 
+  type="otherGames" 
+  title="Other Games" 
+  description="Explore our diverse collection of games and find your favorite!"
+/>
+
 
   <Faqs />
   </main>
