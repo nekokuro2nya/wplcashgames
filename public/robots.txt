@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
- 
-Sitemap: https://wpl-games.pages.dev/sitemap.xml 
+
+Sitemap: https://ddream11.com/sitemap-index.xml 

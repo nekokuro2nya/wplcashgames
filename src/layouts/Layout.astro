@@ -2,9 +2,21 @@
 interface Props {
 	title: string;
 	description?: string;
+	image?: string;
+	canonicalURL?: string;
+	noindex?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { 
+	title, 
+	description = "WPL Cash Games - India's trusted real money gaming platform. Play Rummy, Aviator, Andar Bahar and win big with secure payments and instant withdrawals. Join millions of players today!",
+	image = "/og-image.jpg",
+	canonicalURL = new URL(Astro.url.pathname, "https://ddream11.com").toString(),
+	noindex = false
+} = Astro.props;
+
+const siteUrl = "https://ddream11.com";
+const keywords = "WPL Cash Games, real money games, Rummy, Aviator, Andar Bahar, online gaming, cash games, skill games, India gaming, Dubai7";
 ---
 
 <!doctype html>
@@ -14,22 +26,66 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/png" href="/favicon.png" />
 		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Primary Meta Tags -->
 		<title>{title}</title>
-		{description && <meta name="description" content={description} />}
+		<meta name="title" content={title} />
+		<meta name="description" content={description} />
+		<meta name="keywords" content={keywords} />
+		<meta name="author" content="Dubai7" />
+		<meta name="publisher" content="Dubai7" />
+		<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
+		<link rel="canonical" href={canonicalURL} />
 		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://wpl-games.pages.dev/" />
+		<meta property="og:url" content={canonicalURL} />
 		<meta property="og:title" content={title} />
-		{description && <meta property="og:description" content={description} />}
-		<meta property="og:image" content="/og-image.jpg" />
+		<meta property="og:description" content={description} />
+		<meta property="og:image" content={new URL(image, siteUrl).toString()} />
+		<meta property="og:site_name" content="WPL Cash Games" />
+		<meta property="og:locale" content="en_IN" />
+		<meta property="article:publisher" content="https://www.dubai7.fun" />
 
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://wpl-games.pages.dev/" />
+		<meta property="twitter:url" content={canonicalURL} />
 		<meta property="twitter:title" content={title} />
-		{description && <meta property="twitter:description" content={description} />}
-		<meta property="twitter:image" content="/og-image.jpg" />
+		<meta property="twitter:description" content={description} />
+		<meta property="twitter:image" content={new URL(image, siteUrl).toString()} />
+		<meta property="twitter:creator" content="@Dubai7" />
+
+		<!-- Additional Meta Tags -->
+		<meta name="theme-color" content="#1F2937" />
+		<meta name="mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-title" content="WPL Cash Games" />
+		<meta name="application-name" content="WPL Cash Games" />
+		<meta name="msapplication-TileColor" content="#1F2937" />
+		<meta name="msapplication-config" content="/browserconfig.xml" />
+		
+		<!-- Preconnect to important domains -->
+		<link rel="preconnect" href="https://www.dubai7.fun" />
+		<link rel="preconnect" href="https://app.vegas1.in" />
+		
+		<!-- Structured Data -->
+		<script type="application/ld+json" set:html={JSON.stringify({
+			"@context": "https://schema.org",
+			"@type": "WebSite",
+			"name": "WPL Cash Games",
+			"url": siteUrl,
+			"publisher": {
+				"@type": "Organization",
+				"name": "Dubai7",
+				"url": "https://www.dubai7.fun"
+			},
+			"potentialAction": {
+				"@type": "SearchAction",
+				"target": `${siteUrl}/games?search={search_term_string}`,
+				"query-input": "required name=search_term_string"
+			}
+		})} />
 	</head>
 	<body class="bg-gray-900 text-white font-sans">
 		<slot />

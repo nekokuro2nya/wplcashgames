@@ -14,10 +14,16 @@ export async function getStaticPaths() {
 
 const { game } = Astro.props;
 const title = `${game.name} - Download & Play | WPL Games`;
-const description = `${game.shortDescription} Download ${game.name} now and start winning real money! ${game.rating}★ rated by ${game.downloads} players.`;
+const description = `${game.shortDescription} Play ${game.name} now and win real money! ${game.rating}★ rated by ${game.downloads} players.`;
+const siteUrl = "https://ddream11.com";
 ---
 
-<Layout title={title} description={description}>
+<Layout 
+  title={`${game.name} - WPL Cash Games`}
+  description={game.description}
+  image={game.heroImage}
+  canonicalURL={`${siteUrl}/games/${game.slug}`}
+>
   <Navbar />
 
     <!-- Hero Section -->
@@ -320,6 +326,51 @@ const description = `${game.shortDescription} Download ${game.name} now and star
   />
 
   <Footer />
+
+  <!-- 遊戲頁面的結構化資料 -->
+  <script type="application/ld+json" set:html={JSON.stringify({
+    "@context": "https://schema.org",
+    "@type": "VideoGame",
+    "name": game.name,
+    "description": game.description,
+    "image": new URL(game.heroImage, siteUrl).toString(),
+    "genre": game.category,
+    "applicationCategory": "Game",
+    "operatingSystem": "Android, iOS",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": game.rating,
+      "ratingCount": game.downloads.replace(/[^0-9]/g, ''),
+      "bestRating": "5",
+      "worstRating": "1"
+    },
+    "offers": {
+      "@type": "Offer",
+      "availability": "https://schema.org/InStock",
+      "url": "https://www.dubai7.fun/",
+      "price": "0",
+      "priceCurrency": "INR"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Dubai7",
+      "url": "https://www.dubai7.fun/"
+    },
+    "review": game.reviews.map(review => ({
+      "@type": "Review",
+      "reviewRating": {
+        "@type": "Rating",
+        "ratingValue": review.rating,
+        "bestRating": "5"
+      },
+      "author": {
+        "@type": "Person",
+        "name": review.name
+      },
+      "datePublished": review.date,
+      "reviewBody": review.comment
+    }))
+  })} />
 </Layout>
 
     <script>
