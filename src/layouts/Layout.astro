@@ -1,4 +1,6 @@
 ---
+import SEO from '../components/SEO.astro';
+
 interface Props {
 	title: string;
 	description?: string;
@@ -7,16 +9,7 @@ interface Props {
 	noindex?: boolean;
 }
 
-const { 
-	title, 
-	description = "WPL Cash Games - India's trusted real money gaming platform. Play Rummy, Aviator, Andar Bahar and win big with secure payments and instant withdrawals. Join millions of players today!",
-	image = "/og-image.jpg",
-	canonicalURL = new URL(Astro.url.pathname, "https://ddream11.com").toString(),
-	noindex = false
-} = Astro.props;
-
-const siteUrl = "https://ddream11.com";
-const keywords = "WPL Cash Games, real money games, Rummy, Aviator, Andar Bahar, online gaming, cash games, skill games, India gaming, Dubai7";
+const props = Astro.props;
 ---
 
 <!doctype html>
@@ -26,115 +19,12 @@ const keywords = "WPL Cash Games, real money games, Rummy, Aviator, Andar Bahar,
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<link rel="icon" type="image/png" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		
-		<!-- Primary Meta Tags -->
-		<title>{title}</title>
-		<meta name="title" content={title} />
-		<meta name="description" content={description} />
-		<meta name="keywords" content={keywords} />
-		<meta name="author" content="Dubai7" />
-		<meta name="publisher" content="Dubai7" />
-		<meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow"} />
-		<link rel="canonical" href={canonicalURL} />
-		
-		<!-- Open Graph / Facebook -->
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content={canonicalURL} />
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:image" content={new URL(image, siteUrl).toString()} />
-		<meta property="og:site_name" content="WPL Cash Games" />
-		<meta property="og:locale" content="en_IN" />
-		<meta property="article:publisher" content="https://www.dubai7.fun" />
-
-		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={canonicalURL} />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content={new URL(image, siteUrl).toString()} />
-		<meta property="twitter:creator" content="@Dubai7" />
-
-		<!-- Additional Meta Tags -->
-		<meta name="theme-color" content="#1F2937" />
-		<meta name="mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-		<meta name="apple-mobile-web-app-title" content="WPL Cash Games" />
-		<meta name="application-name" content="WPL Cash Games" />
-		<meta name="msapplication-TileColor" content="#1F2937" />
-		<meta name="msapplication-config" content="/browserconfig.xml" />
-		
-		<!-- Preconnect to important domains -->
-		<link rel="preconnect" href="https://www.dubai7.fun" />
-		<link rel="preconnect" href="https://app.vegas1.in" />
-		
-		<!-- Structured Data -->
-		<script type="application/ld+json" set:html={JSON.stringify({
-			"@context": "https://schema.org",
-			"@type": "WebSite",
-			"name": "WPL Cash Games",
-			"url": siteUrl,
-			"publisher": {
-				"@type": "Organization",
-				"name": "Dubai7",
-				"url": "https://www.dubai7.fun"
-			},
-			"potentialAction": {
-				"@type": "SearchAction",
-				"target": `${siteUrl}/games?search={search_term_string}`,
-				"query-input": "required name=search_term_string"
-			}
-		})} />
+		<link rel="stylesheet" href="../src/assets/style/global.css" />
+		<SEO {...props} />
 	</head>
 	<body class="bg-gray-900 text-white font-sans">
 		<slot />
 	</body>
 </html>
 
-<style is:global>
-	/* CSS Reset */
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-	}
 
-	html,
-	body {
-		margin: 0;
-		padding: 0;
-		width: 100%;
-		min-height: 100vh;
-		overflow-x: hidden;
-	}
-
-	/* 移除所有連結的下劃線 */
-	a {
-		text-decoration: none;
-	}
-
-	/* 自定義滾動條 */
-	::-webkit-scrollbar {
-		width: 8px;
-	}
-
-	::-webkit-scrollbar-track {
-		background: #1f2937;
-	}
-
-	::-webkit-scrollbar-thumb {
-		background: #4b5563;
-		border-radius: 4px;
-	}
-
-	::-webkit-scrollbar-thumb:hover {
-		background: #6b7280;
-	}
-
-	/* 文字選擇樣式 */
-	::selection {
-		background: #3b82f6;
-		color: white;
-	}
-</style>
