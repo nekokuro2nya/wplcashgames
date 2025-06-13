@@ -4,77 +4,77 @@
       "id": "rummy",
       "name": "Rummy",
       "icon": "/images/games/icon/Card-01.webp",
-      "description": "A universally cherished card game, Indian Rummy accommodates 2-6 players and is a staple for family entertainment. The objective is to strategically form valid sets or sequences from your hand. Engage in various modes, including Pool, Deals, and Points Rummy on Dubai7, to leverage your skills for tangible cash earnings.",
+      "description": "Indian Rummy: a 2-6 player card game where you form sets/sequences to win. Play various modes on MPL for **tangible cash**.",
       "category": "Card Game"
     },
     {
       "id": "poker",
       "name": "Texas Hold'em Poker",
       "icon": "/images/games/icon/Card-02.webp",
-      "description": "Poker stands as a sophisticated card game where players strive to construct the optimal hand to claim victory. Dubai7 offers a comprehensive poker experience, featuring real-money games such as Texas Hold'em, Omaha, and Poker Puzzle. Select tables aligned with your financial comfort and compete for guaranteed prize pools that can reach up to ₹1.5 crore. We advocate for responsible and enjoyable play.",
+      "description": "Poker: build the optimal hand to win. Dubai7 offers **real-money** Texas Hold'em, Omaha, and Poker Puzzle. Play responsibly for **guaranteed prize pools**.",
       "category": "Card Game"
     },
     {
       "id": "call-break",
       "name": "Call Break",
       "icon": "/images/games/icon/Card-03.webp",
-      "description": "Known colloquially as Lakadi or Ghochi, Call Break is a compelling card game demanding foresight and tactical bidding. Players must accurately predict and win the number of tricks by playing higher-ranking cards. Dubai7 presents an array of Call Break variants, including Classic, Rapid, Multi-Winner, and Trump Callbreak, all available for real-money wagering.",
+      "description": "Call Break (Lakadi/Ghochi): a tactical card game requiring accurate bidding and trick-winning. Dubai7 offers diverse variants for **real-money wagering**.",
       "category": "Card Game"
     },
     {
       "id": "win-patti",
       "name": "Win Patti",
       "icon": "/images/games/icon/Card-04.webp",
-      "description": "Win Patti is a three-card game that profoundly emphasizes skill over mere chance. Success hinges on making astute decisions regarding when to bet, fold, or bluff. Engage in Win Patti and numerous other cash-earning card games on Dubai7 to secure genuine online monetary rewards.",
+      "description": "Win Patti: a skill-based three-card game. Make astute decisions to bet, fold, or bluff. Play on Dubai7 for **genuine online monetary rewards**.",
       "category": "Card Game"
     },
     {
       "id": "gin-rummy",
       "name": "Gin Rummy",
       "icon": "/images/games/icon/Card-05.webp",
-      "description": "Gin Rummy is a dynamic, two-player card game centered on forming sets by arranging cards into sequences or matching ranks. Distinct from traditional Rummy, players strategically aim to \"knock\" when their hand reaches a winning state. Hone your tactical acumen, meticulously plan your moves, and convert your sharp skills into significant cash prizes.",
+      "description": "Gin Rummy: a dynamic two-player game. Form sets/sequences, then 'knock' to win. Hone your tactical acumen on Dubai7 for **significant cash prizes**.",
       "category": "Card Game"
     },
     {
       "id": "trump-call-break",
       "name": "Trump Call Break",
       "icon": "/images/games/icon/Card-06.webp",
-      "description": "Trump Call Break on Dubai7 introduces an engaging twist to the classic Call Break. This variant empowers players to designate a trump suit, which can decisively overpower other cards. This strategic layer elevates the game's coDubai7exity and excitement, offering skilled players enhanced opportunities for real cash rewards.",
+      "description": "Trump Call Break on Dubai7: a strategic twist to Call Break. Designate a trump suit to overpower other cards, enhancing complexity and **real cash rewards**.",
       "category": "Card Game"
     },
     {
       "id": "badam-satti",
       "name": "Badam Satti",
       "icon": "/images/games/icon/Card-07.webp",
-      "description": "Badam Satti, played with a standard 52-card deck, commences with the 7 of Hearts. The primary goal is to sequentially lay down your cards, ascending or descending from the 7 within their respective suits. EDubai7oy shrewd strategy to be the first to clear your hand, skillfully block opponents, and earn rewards with each triumphant round.",
+      "description": "Badam Satti: a 52-card game starting with 7 of Hearts. Sequentially lay cards up/down by suit. Employ shrewd strategy to clear your hand first and earn **rewards with each triumph**.",
       "category": "Card Game"
     },
     {
       "id": "spades",
       "name": "Spades",
       "icon": "/images/games/icon/Card-08.webp",
-      "description": "In the card game Spades, the Spade suit holds ultimate trump power, surpassing all other cards. Participate individually or form teams of 2, 3, 4, or 6 players. Your objective is to accurately bid the number of tricks you anticipate winning and then fulfill that commitment to score points. Outmaneuver your adversaries through ingenious gameplay.",
+      "description": "Spades: the Spade suit trumps all others. Play solo or in teams, bidding tricks accurately. Outsmart opponents with ingenious gameplay for **cash rewards**.",
       "category": "Card Game"
     },
     {
       "id": "cube-solitaire",
       "name": "Cube Solitaire",
       "icon": "/images/games/icon/Card-09.webp",
-      "description": "Cube Solitaire offers a modernized, fast-paced, and timed rendition of the timeless classic. Players must stack cards in alternating colors, from King down to Ace, and clear the board before the clock expires. Your coDubai7etion speed directly correlates with your score, enabling you to earn rewards with every successful game.",
+      "description": "Cube Solitaire: a fast-paced, timed Solitaire. Stack cards in alternating colors, King to Ace, clearing the board before time expires. Higher speed yields better scores and **rewards**.",
       "category": "Card Game"
     },
     {
       "id": "andar-bahar",
       "name": "Andar Bahar",
       "icon": "/images/games/icon/Card-10.webp",
-      "description": "Andar Bahar is a spirited Indian card game renowned for its siDubai7icity and suspense. A Joker card is prominently placed centrally, and players wager on whether the subsequent card matching the Joker will appear on the \"Andar\" (inside) or \"Bahar\" (outside) side. Cards are dealt progressively until a match is revealed. Engage now and immerse yourself in its exhilarating unpredictability!",
+      "description": "Andar Bahar: a spirited Indian card game of simplicity and suspense. Bet on which side the matching Joker card appears. Engage now for exhilarating unpredictability and chances to **win real money**.",
       "category": "Card Game"
     },
     {
       "id": "draw-4",
       "name": "Draw 4",
       "icon": "/images/games/icon/Card-11.webp",
-      "description": "Draw 4 is a high-octane card game where players rapidly match cards by color or number. The ultimate aim is to discard all your cards or possess the lowest score when the time limit elapses. Swift decision-making and strategic play are paramount to racing to the finish line first and securing impressive cash rewards.",
+      "description": "Draw 4: a high-octane card game where players rapidly match cards by color or number. Discard all cards or have the lowest score by time's end. Swift decisions are paramount for **impressive cash rewards**.",
       "category": "Card Game"
     }
   ],
@@ -83,63 +83,63 @@
       "id": "ludo",
       "name": "Ludo",
       "icon": "/images/games/icon/Casual-01.webp",
-      "description": "Ludo stands as a perennially popular board game, accommodating 2 to 4 participants. The primary objective is to strategically maneuver all your pawns to the designated home finish. On Dubai7, players can engage in various online Ludo **cash game** formats, including Ludo Win, Ludo Dice, and Ludo 2 Dice. Join Dubai7 now to immerse yourself in these **real money games** and secure substantial **real cash earnings** with ease.",
+      "description": "Ludo is a popular 2-4 player board game. Maneuver pawns to win on Dubai7. Play Ludo Win/Dice **cash games** to earn **real money**.",
       "category": "Board Game"
     },
     {
       "id": "snl",
       "name": "Snakes & Ladders",
       "icon": "/images/games/icon/Casual-02.webp",
-      "description": "Snakes and Ladders (SNL) is an engaging game designed for two or more players. Participants propel their game piece across the board by rolling a dice. While ascending ladders offers accelerated progress towards the finish, players must deftly avoid snakes that regrettably slide them back down. Compete on Dubai7 and play for exciting **cash prizes**.",
+      "description": "Snakes & Ladders (SNL) is an engaging board game for 2+ players. Roll dice to move, ascend ladders, and avoid snakes. Compete on Dubai7 for exciting **cash prizes**.",
       "category": "Board Game"
     },
     {
       "id": "carrom",
       "name": "Carrom",
       "icon": "/images/games/icon/Casual-03.webp",
-      "description": "Carrom is a captivating two-player board game where precision and skill are paramount. Players aim to dexterously flick their discs into the board's pockets to accumulate points. The objective is to outscore your opponent, thereby securing **real cash prizes**. Join Dubai7 to experience both free online play and engaging **cash-winning** competitions.",
+      "description": "Carrom: a two-player board game of precision. Flick discs into pockets to outscore opponents and secure **real cash prizes**. Play free or **cash-winning** games on Dubai7.",
       "category": "Board Game"
     },
     {
       "id": "opinio",
       "name": "Opinio",
-      "description": "Opinio is an insightful prediction-based game that rigorously assesses your judgment capabilities. Players are challenged to make accurate forecasts, thereby demonstrating their expertise. Join now to participate in online cricket-themed **real money games**, exhibit your keen insight, and **win genuine cash rewards**.",
       "icon": "/images/games/icon/Casual-04.webp",
+      "description": "Opinio is a prediction game testing your judgment. Make accurate forecasts in these online cricket-themed **real money games** on Dubai7 to **win genuine cash rewards**.",
       "category": "Prediction Game"
     },
     {
       "id": "crash-skill",
       "name": "Crash Skill",
       "icon": "/images/games/icon/Casual-05.webp",
-      "description": "Crash Skill is a strategic game where players must astutely predict the precise moment a virtual rocket will crash. Success hinges on cashing out your winnings before the inevitable crash occurs, thereby multiplying your returns. Engage in Crash **real money games** on Dubai7 to rigorously test your timing and judgment skills for significant financial gains, earning considerable **cash prizes**.",
+      "description": "Crash Skill: predict the rocket's crash to multiply winnings. Cash out before impact in this strategic **real money game**. Test your timing on Dubai7 for significant **cash prizes**.",
       "category": "Crash Game"
     },
     {
       "id": "cricket-100x",
       "name": "Cricket 100x",
       "icon": "/images/games/icon/Casual-06.webp",
-      "description": "Cricket 100x offers an innovative and entertaining fusion of cricket mechanics with rapid-fire quizzes. Players select cells on either a 3x3, 4x4, or 5x5 grid to execute their moves. The challenge lies in hitting designated targets without getting 'out', which directly contributes to increased monetary winnings. Participate in this engaging online **cash game** and **secure real money**.",
+      "description": "Cricket 100x: a fusion of cricket and quizzes. Select grid cells to hit targets and avoid outs for monetary winnings. Play this online **cash game** on Dubai7 to **secure real money**.",
       "category": "Sports Game"
     },
     {
       "id": "snl-numbers",
       "name": "SNL Numbers",
       "icon": "/images/games/icon/Casual-07.webp",
-      "description": "SNL Numbers introduces a dynamic twist to the traditional board game. Players advance their tokens by matching flashing numbers, ascend ladders to accrue points, and strategically avoid snakes. Landing on an opponent's token provides the advantage of sending them back to the start. Aim for the highest score to claim monetary victories and significant **cash prizes**.",
+      "description": "SNL Numbers: a dynamic twist on the classic. Match flashing numbers to advance, climb ladders, and avoid snakes. Outmaneuver opponents for monetary victories and **cash prizes**.",
       "category": "Board Game"
     },
     {
       "id": "bubble-shooter",
       "name": "Bubble Shooter",
       "icon": "/images/games/icon/Casual-08.webp",
-      "description": "Bubble Shooter on Dubai7 is an engaging puzzle game where the objective is to precisely shoot colored bubbles to form clusters of three or more identical colors, causing them to pop. Players must prevent the bubbles from accumulating to the bottom of the screen. Popping more bubbles yields higher scores, offering rewarding opportunities to **win cash prizes**.",
+      "description": "Bubble Shooter on Dubai7: shoot colored bubbles to pop clusters. Prevent them from reaching the bottom. Higher scores yield **rewarding cash prizes**.",
       "category": "Arcade Game"
     },
     {
       "id": "bingo-skill",
       "name": "Bingo Skill",
       "icon": "/images/games/icon/Casual-09.webp",
-      "description": "Bingo Skill is a lively number game where players mark off called numbers on a 5x5 grid. The goal is to complete a full row, column, or diagonal, at which point calling 'Bingo' secures the win. Play online on Dubai7 to enjoy a swift, exhilarating game experience while earning **real cash prizes**.",
+      "description": "Bingo Skill: mark numbers on a 5x5 grid. Complete a row/column/diagonal to win! Play online on Dubai7 for a swift, exhilarating experience and **real cash prizes**.",
       "category": "Number Game"
     }
   ],
@@ -148,14 +148,14 @@
       "id": "fantasy-cricket",
       "name": "Fantasy Cricket",
       "icon": "/images/games/icon/Fantasy-01.webp",
-      "description": "Fantasy Cricket challenges enthusiasts to assemble their ultimate 11-player squad from an actual cricket match. The strategic selection of a captain and vice-captain is crucial, as their aDubai7ified points directly impact your team's score, which is dynamically calculated based on their real-world performance. Engage in this exhilarating, real-money earning game on Dubai7 to transform your cricketing acumen into tangible rewards.",
+      "description": "Assemble your 11-player squad from real matches. Strategic captain/vice-captain choices amplify points. Play this **real money game** on **mpl** to earn **cash prizes**.",
       "category": "Fantasy Game"
     },
     {
       "id": "fantasy-football",
       "name": "Fantasy Football",
       "icon": "/images/games/icon/Fantasy-02.webp",
-      "description": "In Fantasy Football, immerse yourself in a virtual football management experience by leveraging real player data to construct your optimal lineup. This strategic game demands keen insight for assembling your ultimate team, executing astute trades, and accumulating points derived from the actual match performances of your chosen players. Compete on the Dubai7 real cash games app to demonstrate your expertise and secure significant winnings.",
+      "description": "Construct your lineup using real player data. This strategic **cash game** on the **mpl real money games** app lets you **win real money** based on performance.",
       "category": "Fantasy Game"
     }
   ],
@@ -164,14 +164,14 @@
       "id": "8ball-pool",
       "name": "8 Ball Pool",
       "icon": "/images/games/icon/Sports-01.webp",
-      "description": "8 Ball Pool is the definitive classic billiard game, played with a cue ball and 15 object balls. Players meticulously take turns pocketing their assigned set of balls, culminating in the decisive potting of the 8-ball to claim victory. Participate in both singles and doubles formats, showcasing your precision and strategic foresight to earn substantial cash rewards.",
+      "description": "Classic 8 Ball Pool: pocket your assigned balls, then the 8-ball. Play singles or doubles to earn substantial cash rewards.",
       "category": "Sports Game"
     },
     {
       "id": "archery",
       "name": "Archery Master",
       "icon": "/images/games/icon/Sports-02.webp",
-      "description": "Archery on Dubai7 offers a compelling test of precision, requiring players to launch arrows at a concentric target. Striking the bullseye yields the maximum 10 points, though fluctuating wind conditions introduce a dynamic challenge to the arrow's trajectory. Compete online, outperform your rivals to achieve superior scores, and win attractive cash prizes.",
+      "description": "Archery on Dubai7 tests precision: launch arrows at a target, aiming for the bullseye despite wind. Compete online and **win attractive cash prizes**.",
       "category": "Sports Game"
     }
   ],
@@ -180,14 +180,14 @@
       "id": "block-puzzle",
       "name": "Block Puzzle",
       "icon": "/images/games/icon/Puzzle-01.webp",
-      "description": "Block Puzzle is a highly engaging and intrinsically satisfying game centered on arranging various polyomino-shaped blocks onto a 9x9 grid. The objective is to strategically coDubai7ete and clear full rows and columns, thereby creating space for subsequent blocks. Engage in timed sessions, compete directly against real players online, and convert your spatial reasoning skills into valuable cash rewards.",
+      "description": "Block Puzzle: arrange polyomino-shaped blocks on a 9x9 grid, clearing rows/columns for space. Compete online in timed sessions and **win valuable cash rewards**.",
       "category": "Puzzle Game"
     },
     {
       "id": "21-puzzle",
       "name": "21 Puzzle",
       "icon": "/images/games/icon/Puzzle-02.webp",
-      "description": "21 Puzzle, often likened to Blackjack, is a deceptively siDubai7e yet strategically rich card game where players place cards onto a 5-column board. The core principle is to maintain the cumulative value of cards in each column at 21 or less. EDubai7oy astute decision-making and tactical prowess to make optimal moves, positioning yourself to win significant cash rewards.",
+      "description": "21 Puzzle (like Blackjack) is a strategic card game. Place cards on a 5-column board, keeping totals at 21 or less. Make astute decisions to **win significant cash rewards**.",
       "category": "Puzzle Game"
     }
   ],
@@ -196,21 +196,21 @@
       "id": "bike-racing",
       "name": "Bike Racing",
       "icon": "/images/games/icon/Racing-01.webp",
-      "description": "Bike Racing offers an exhilarating multiplayer experience within the Dubai7 app. Navigate challenging, curvilinear tracks while deftly evading traffic. Utilize the in-game map to monitor your progress and strategically balance your speed to reach the finish line ahead of your rivals, thereby securing substantial cash rewards.",
+      "description": "Bike Racing: an exhilarating multiplayer experience on the Dubai7 app. Navigate tracks, evade traffic, and balance speed to outpace rivals for **substantial cash rewards**.",
       "category": "Racing Game"
     },
     {
       "id": "monster-truck",
       "name": "Monster Truck",
       "icon": "/images/games/icon/Racing-02.webp",
-      "description": "In Monster Truck, players command powerful vehicles across formidable, rugged landscapes. Execute spectacular aerial stunts and ensure precise landings to maintain momentum and continue the race. Compete online on Dubai7, striving to outperform other contenders and claim genuine cash prizes by expertly conquering diverse and demanding terrain.",
+      "description": "Monster Truck: command powerful vehicles over rugged landscapes. Execute stunts, maintain momentum, and outperform contenders on mpl to claim **genuine cash prizes**.",
       "category": "Racing Game"
     },
     {
       "id": "runner-no1",
       "name": "Runner No.1",
       "icon": "/images/games/icon/Racing-03.webp",
-      "description": "Runner No.1 is an immersive 3D endless runner game that casts players as an intrepid explorer relentlessly pursued by a bear across varied and challenging terrains. Success hinges on adeptly avoiding obstacles, maintaining a lead over your pursuer, and diligently collecting gold coins for valuable bonus points. Your score directly correlates with your endurance and distance covered.",
+      "description": "Runner No.1: an immersive 3D endless runner. Control an explorer pursued by a bear. Avoid obstacles, stay ahead, and collect gold for bonus points. Score correlates with endurance.",
       "category": "Racing Game"
     }
   ],
@@ -219,21 +219,21 @@
       "id": "fruit-chop",
       "name": "Fruit Chop",
       "icon": "/images/games/icon/Other-01.webp",
-      "description": "Fruit Chop is a high-octane game designed to test your reflexes. Players must swiftly slice numerous fruits appearing on the screen, demonstrating quick hand-eye coordination while judiciously avoiding explosive bombs. Your efficiency in chopping fruits directly contributes to your score.",
+      "description": "Fruit Chop: a high-octane game testing reflexes. Swiftly slice fruits while avoiding bombs. Your chopping efficiency directly contributes to your score.",
       "category": "Arcade Game"
     },
     {
       "id": "fruit-dart",
       "name": "Fruit Dart",
       "icon": "/images/games/icon/Other-02.webp",
-      "description": "Fruit Dart presents an enjoyable dart-throwing challenge where the objective is to precisely target and slice fruits displayed on the screen. A siDubai7e tap anywhere launches darts; accuracy and impeccable timing are key to hitting the correct targets, accumulating points, and winning cash prizes on Dubai7.",
+      "description": "Fruit Dart: an enjoyable dart-throwing challenge. Precisely target and slice fruits. Accuracy and timing are key to hitting targets, accumulating points, and **winning cash prizes** on mpl.",
       "category": "Arcade Game"
     },
     {
       "id": "speed-chess",
       "name": "Speed Chess",
       "icon": "/images/games/icon/Other-03.webp",
-      "description": "Speed Chess revitalizes the classic strategy game with an accelerated pace, offering a mentally stimulating and engaging experience. Featuring adjustable difficulty levels, it caters to both novice players seeking foundational challenges and seasoned experts desiring rigorous competition.",
+      "description": "Speed Chess: a revitalized classic strategy game with accelerated pace. Features adjustable difficulty, catering to both novices and experts for rigorous competition.",
       "category": "Strategy Game"
     }
   ]
