@@ -10,24 +10,39 @@ interface FAQItem {
 
 // 直接讀取 faqs.md 文件
 const faqsPath = join(process.cwd(), 'src/content/faqs.md');
-const faqsContent = readFileSync(faqsPath, 'utf-8');
-const { data, content } = matter(faqsContent);
-
-// 解析 FAQ 內容
-const faqItems: FAQItem[] = content.split('##').slice(1).map((item: string) => {
-  const [question, answer] = item.split('\n\n');
-  return {
-    question: question.trim(),
-    answer: answer.trim()
-  };
-});
-
-const faq = {
+let faqItems: FAQItem[] = [];
+let faq = {
   data: {
-    title: data.title || "Frequently Asked Questions",
-    description: data.description || "Get answers to the most common questions about Dubai7 gaming platform"
+    title: "Frequently Asked Questions",
+    description: "Get answers to the most common questions about Dubai7 gaming platform"
   }
 };
+
+try {
+  const faqsContent = readFileSync(faqsPath, 'utf-8');
+  const { data, content } = matter(faqsContent);
+
+  // 解析 FAQ 內容
+  if (content) {
+    faqItems = content.split('##').slice(1).map((item: string) => {
+      const parts = item.split('\n\n');
+      const question = parts[0]?.trim() || '';
+      const answer = parts[1]?.trim() || '';
+      return { question, answer };
+    }).filter(item => item.question && item.answer);
+  }
+
+  if (data) {
+    faq = {
+      data: {
+        title: data.title || faq.data.title,
+        description: data.description || faq.data.description
+      }
+    };
+  }
+} catch (error) {
+  console.error('Error reading FAQ content:', error);
+}
 ---
 
 <section class="py-20" id="faq">
