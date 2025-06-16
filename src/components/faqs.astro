@@ -1,80 +1,85 @@
+---
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+interface FAQItem {
+  question: string;
+  answer: string;
+}
+
+// 獲取 FAQ 文檔
+const faqs = await getCollection('faqs');
+
+// 檢查是否找到 FAQ 文檔
+if (!faqs || faqs.length === 0) {
+  console.error('No FAQ documents found in the collection');
+}
+
+// 使用第一個 FAQ 文檔，如果沒有則使用默認值
+const faq = faqs[0] || {
+  data: {
+    title: "Frequently Asked Questions",
+    description: "Get answers to the most common questions about Dubai7 gaming platform"
+  },
+  body: `
+## Is Dubai7 legal and safe to play in India?
+
+Yes, Dubai7 is completely legal in India as we offer skill-based games. Our platform is secured with bank-level encryption and follows all Indian gaming regulations. We are registered and licensed to operate in India.
+
+## How can I withdraw my winnings?
+
+You can withdraw your winnings instantly to your bank account via UPI, Paytm, PhonePe, Google Pay, or direct bank transfer. Minimum withdrawal amount is ₹50 and there are no hidden charges.
+
+## What is the minimum deposit amount?
+
+The minimum deposit amount is just ₹10. You can deposit money using UPI, digital wallets, net banking, or debit/credit cards. All transactions are processed instantly and securely.
+
+## Are the games fair and not rigged?
+
+Absolutely! All our games use certified Random Number Generator (RNG) technology to ensure fair play. We are audited by third-party agencies and maintain complete transparency in our gaming algorithms.
+
+## Can I play with my friends?
+
+Yes! You can create private rooms and invite your friends to play together. You can also refer friends and earn bonus cash for every successful referral when they make their first deposit.
+
+## What if I face any technical issues?
+
+Our 24/7 customer support team is always ready to help you. You can reach us through live chat, email, or phone call. We also have a comprehensive help center with detailed guides and troubleshooting tips.`
+};
+
+// 解析 FAQ 內容
+const faqItems: FAQItem[] = faq.body.split('##').slice(1).map((item: string) => {
+  const [question, answer] = item.split('\n\n');
+  return {
+    question: question.trim(),
+    answer: answer.trim()
+  };
+});
+---
+
 <section id="faq" class="py-20">
     <div class="container mx-auto px-3 xs:px-4">
       <div class="text-center mb-12 xs:mb-16">
         <h2 class="text-2xl xs:text-3xl md:text-5xl font-display font-bold mb-3 xs:mb-4 text-gradient">
-          Frequently Asked Questions
+          {faq.data.title}
         </h2>
         <p class="text-base xs:text-lg text-gray-300 max-w-2xl mx-auto px-2 xs:px-0">
-          Get answers to the most common questions about WPL gaming platform
+          {faq.data.description}
         </p>
       </div>
 
       <div class="max-w-3xl mx-auto space-y-4">
-        <!-- FAQ 1 -->
-        <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
-          <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
-            <span class="text-base xs:text-lg font-semibold">Is WPL legal and safe to play in India?</span>
-            <span class="faq-icon text-primary-400 text-xl">+</span>
-          </button>
-          <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
-            <p class="text-sm xs:text-base text-gray-300">Yes, WPL is completely legal in India as we offer skill-based games. Our platform is secured with bank-level encryption and follows all Indian gaming regulations. We are registered and licensed to operate in India.</p>
+        {faqItems.map((item: FAQItem) => (
+          <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
+            <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
+              <span class="text-base xs:text-lg font-semibold">{item.question}</span>
+              <span class="faq-icon text-primary-400 text-xl">+</span>
+            </button>
+            <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
+              <p class="text-sm xs:text-base text-gray-300">{item.answer}</p>
+            </div>
           </div>
-        </div>
-
-        <!-- FAQ 2 -->
-        <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
-          <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
-            <span class="text-base xs:text-lg font-semibold">How can I withdraw my winnings?</span>
-            <span class="faq-icon text-primary-400 text-xl">+</span>
-          </button>
-          <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
-            <p class="text-sm xs:text-base text-gray-300">You can withdraw your winnings instantly to your bank account via UPI, Paytm, PhonePe, Google Pay, or direct bank transfer. Minimum withdrawal amount is ₹50 and there are no hidden charges.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 3 -->
-        <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
-          <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
-            <span class="text-base xs:text-lg font-semibold">What is the minimum deposit amount?</span>
-            <span class="faq-icon text-primary-400 text-xl">+</span>
-          </button>
-          <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
-            <p class="text-sm xs:text-base text-gray-300">The minimum deposit amount is just ₹10. You can deposit money using UPI, digital wallets, net banking, or debit/credit cards. All transactions are processed instantly and securely.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 4 -->
-        <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
-          <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
-            <span class="text-base xs:text-lg font-semibold">Are the games fair and not rigged?</span>
-            <span class="faq-icon text-primary-400 text-xl">+</span>
-          </button>
-          <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
-            <p class="text-sm xs:text-base text-gray-300">Absolutely! All our games use certified Random Number Generator (RNG) technology to ensure fair play. We are audited by third-party agencies and maintain complete transparency in our gaming algorithms.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 5 -->
-        <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
-          <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
-            <span class="text-base xs:text-lg font-semibold">Can I play with my friends?</span>
-            <span class="faq-icon text-primary-400 text-xl">+</span>
-          </button>
-          <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
-            <p class="text-sm xs:text-base text-gray-300">Yes! You can create private rooms and invite your friends to play together. You can also refer friends and earn bonus cash for every successful referral when they make their first deposit.</p>
-          </div>
-        </div>
-
-        <!-- FAQ 6 -->
-        <div class="faq-item bg-gray-900 border border-gray-700 rounded-lg">
-          <button class="faq-question w-full text-left p-4 xs:p-6 flex justify-between items-center hover:bg-gray-800 transition-colors">
-            <span class="text-base xs:text-lg font-semibold">What if I face any technical issues?</span>
-            <span class="faq-icon text-primary-400 text-xl">+</span>
-          </button>
-          <div class="faq-answer hidden p-4 xs:p-6 pt-0 border-t border-gray-700">
-            <p class="text-sm xs:text-base text-gray-300">Our 24/7 customer support team is always ready to help you. You can reach us through live chat, email, or phone call. We also have a comprehensive help center with detailed guides and troubleshooting tips.</p>
-          </div>
-        </div>
+        ))}
       </div>
 
       <div class="text-center mt-8 xs:mt-12">
@@ -82,7 +87,7 @@
         <a href="/contact" class="btn-primary text-sm xs:text-base px-6 py-3">Contact Support</a>
       </div>
     </div>
-  </section>
+</section>
 
 <script>
   // 等待 DOM 加載完成

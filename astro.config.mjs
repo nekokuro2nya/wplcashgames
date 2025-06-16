@@ -9,5 +9,8 @@ export default defineConfig({
   site: 'https://wpl-games.pages.dev',
   build: {
     format: 'file'
+  },
+  content: {
+    collections: ['faqs']
   }
 });
