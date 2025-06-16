@@ -30,3 +30,7 @@ Our 24/7 customer support team is always ready to help you. You can reach us thr
 ## What types of games are available on Dubai7?
 
 Dubai7 offers a wide array of skill-based games, including popular card games like Rummy and Andar Bahar, and unique experiences such as Aviator. Our diverse selection caters to various preferences, ensuring an engaging gaming experience for all.
+
+## Are there any bonuses or promotions for new players?
+
+Yes, new players on Dubai7 can often take advantage of welcome bonuses or promotions. Additionally, you can earn bonus cash by referring friends who make their first deposit, adding more value to your gaming journey.
